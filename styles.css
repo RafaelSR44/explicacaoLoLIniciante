@@ -1,13 +1,24 @@
-.rune-tree.inspiracao {
-    border-color: #5bc0de;
-    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(91, 192, 222, 0.1));
-}
-
 /* Nova estrutura para runas menores */
 .rune-grid-minor {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+}
+
+/* Estilo para os ícones das runas */
+.rune-icon {
+    width: 85px;
+    height: 85px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.rune-icon:hover {
+    transform: scale(1.1);
 }
 
 .rune-row {
@@ -402,6 +413,9 @@ ul li {
     text-align: center;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rune-category {
@@ -727,6 +741,25 @@ ul li {
     right: 10px;
     font-size: 1.5rem;
     opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+    .rune-icon {
+        width: 60px;
+        height: 60px;
+        margin-right: 0.5rem;
+    }
+    
+    .rune-tree h3 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Em mobile, mostrar imagem acima do texto */
+    .rune-tree h3 {
+        flex-direction: column;
+    }
 }
 
 /* Mobile responsive */
