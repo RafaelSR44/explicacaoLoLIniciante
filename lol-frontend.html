@@ -1,384 +1,239 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Básico de League of Legends</title>
-    <link rel="stylesheet" href="styles.css"></link>
+    <title>League of Legends - Guia Completo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>O Básico de League of Legends</h1>
-        <p>Um guia completo para iniciantes</p>
+        <h1>League of Legends</h1>
+        <p>Guia Básico para Iniciantes</p>
     </header>
-    
+
     <nav>
-        <div class="container nav-container">
-            <div class="nav-item active" data-target="intro">Introdução</div>
-            <div class="nav-item" data-target="map">Mapa e Lanes</div>
-            <div class="nav-item" data-target="champions">Campeões</div>
-            <div class="nav-item" data-target="damage">Dano e Resistências</div>
-            <div class="nav-item" data-target="spells">Feitiços</div>
-            <div class="nav-item" data-target="runes">Runas</div>
-            <div class="nav-item" data-target="gold">Minions e Ouro</div>
-            <div class="nav-item" data-target="objectives">Objetivos</div>
-            <div class="nav-item" data-target="tips">Dicas</div>
-        </div>
+        <button class="nav-btn active" data-section="overview">Visão Geral</button>
+        <button class="nav-btn" data-section="runes">Runas</button>
+        <button class="nav-btn" data-section="spells">Feitiços</button>
+        <button class="nav-btn" data-section="damage">Tipos de Dano</button>
+        <button class="nav-btn" data-section="champions">Campeões</button>
+        <button class="nav-btn" data-section="lanes">Lanes</button>
+        <button class="nav-btn" data-section="minions">Minions e Gold</button>
     </nav>
-    
-    <div class="container">
-        <!-- Introdução -->
-        <div class="section active" id="intro">
-            <h2>Introdução</h2>
-            <p>League of Legends (LoL) é um jogo de estratégia em equipe onde dois times de cinco jogadores competem para destruir a base inimiga. Cada jogador controla um campeão com habilidades únicas e trabalha junto com seus companheiros para alcançar a vitória.</p>
-            
-            <h3>Objetivo do Jogo</h3>
-            <p>O objetivo principal é destruir o Nexus inimigo, localizado na base adversária. Para chegar até lá, os times precisam avançar através de torres de defesa e enfrentar campeões inimigos em diferentes rotas do mapa.</p>
-            
-            <button class="collapsible">Fases do Jogo</button>
-            <div class="collapsible-content">
-                <div>
-                    <h4>Fase de Rotas (Early Game)</h4>
-                    <p>Primeiros 15 minutos. Foco em farmar minions e ganhar vantagem na lane.</p>
-                    
-                    <h4>Meio de Jogo (Mid Game)</h4>
-                    <p>Entre 15-25 minutos. Foco em objetivos neutros e destruir torres externas.</p>
-                    
-                    <h4>Fim de Jogo (Late Game)</h4>
-                    <p>Após 25 minutos. Foco em lutas de equipe completas e empurrar para a base inimiga.</p>
+
+    <main>
+        <section id="overview" class="content-section active">
+            <h2>Visão Geral do Jogo</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>O que é League of Legends?</h3>
+                    <p>League of Legends (LoL) é um jogo MOBA (Multiplayer Online Battle Arena) onde duas equipes de 5 jogadores competem para destruir o Nexus inimigo.</p>
+                    <img src="/api/placeholder/300/200" alt="Mapa do LoL">
                 </div>
-            </div>
-            
-            <button class="collapsible">Terminologia Comum</button>
-            <div class="collapsible-content">
-                <div>
+                <div class="card">
+                    <h3>Objetivo Principal</h3>
                     <ul>
-                        <li><strong>CS (Creep Score)</strong>: Quantidade de minions abatidos.</li>
-                        <li><strong>Gank</strong>: Emboscada surpresa, geralmente do jungler.</li>
-                        <li><strong>Farm/Farming</strong>: Ato de abater minions para ganhar ouro.</li>
-                        <li><strong>Push</strong>: Empurrar a lane em direção à torre inimiga.</li>
-                        <li><strong>Recall</strong>: Voltar para a base.</li>
-                        <li><strong>CC (Crowd Control)</strong>: Habilidades que limitam movimentos ou ações.</li>
-                        <li><strong>KDA</strong>: Abates/Mortes/Assistências - métrica de desempenho.</li>
-                        <li><strong>Kite</strong>: Atacar enquanto se afasta do inimigo.</li>
-                        <li><strong>Leash</strong>: Ajudar o jungler com seu primeiro monstro.</li>
-                        <li><strong>Meta</strong>: Estratégias e campeões considerados mais eficientes no momento.</li>
-                        <li><strong>Peel</strong>: Proteger aliados vulneráveis de inimigos.</li>
-                        <li><strong>Poke</strong>: Causar dano à distância sem se comprometer em lutas.</li>
-                        <li><strong>Roam</strong>: Sair da sua lane para ajudar outras.</li>
-                        <li><strong>Tilt</strong>: Estado mental negativo após jogadas ruins.</li>
-                        <li><strong>Zoning</strong>: Negar área do mapa ao inimigo através de posicionamento.</li>
+                        <li>Destruir torres inimigas</li>
+                        <li>Matar minions para ouro e experiência</li>
+                        <li>Trabalhar em equipe</li>
+                        <li>Destruir o Nexus inimigo</li>
                     </ul>
                 </div>
             </div>
-        </div>
-        
-        <!-- Mapa e Lanes -->
-        <div class="section" id="map">
-            <h2>Mapa e Lanes</h2>
-            <p>O mapa principal do LoL, chamado Summoner's Rift, é dividido em três lanes (rotas) principais e uma área de selva:</p>
-            
-            <div class="map-container">
-                <div class="map-img">
-                    <p>Mapa do Summoner's Rift<br>[Placeholder para imagem do mapa]</p>
-                </div>
-            </div>
-            
-            <div class="grid">
-                <div class="card">
-                    <div class="role">
-                        <div class="role-icon">T</div>
-                        <div class="role-name">Top Lane</div>
-                    </div>
-                    <p>Rota superior, geralmente ocupada por campeões tanques ou lutadores que podem sobreviver sozinhos.</p>
-                    <p class="example">Exemplos de campeões: Darius, Garen, Ornn</p>
-                </div>
-                
-                <div class="card">
-                    <div class="role">
-                        <div class="role-icon">M</div>
-                        <div class="role-name">Mid Lane</div>
-                    </div>
-                    <p>Rota do meio, normalmente ocupada por magos ou assassinos com potencial de roaming.</p>
-                    <p class="example">Exemplos de campeões: Ahri, Zed, Syndra</p>
-                </div>
-                
-                <div class="card">
-                    <div class="role">
-                        <div class="role-icon">B</div>
-                        <div class="role-name">Bot Lane</div>
-                    </div>
-                    <p>Rota inferior, tradicionalmente ocupada por um atirador e um suporte.</p>
-                    <p class="example">Exemplos de campeões: Jinx/Thresh, Ashe/Soraka</p>
-                </div>
-                
-                <div class="card">
-                    <div class="role">
-                        <div class="role-icon">J</div>
-                        <div class="role-name">Jungle</div>
-                    </div>
-                    <p>Área entre as rotas, onde o jungler elimina monstros neutros e ajuda as lanes.</p>
-                    <p class="example">Exemplos de campeões: Lee Sin, Vi, Amumu</p>
-                </div>
-            </div>
-            
-            <h3>Estruturas do Mapa</h3>
-            
-            <div class="grid">
-                <div class="card">
-                    <h3>Torres</h3>
-                    <ul>
-                        <li>Defendem as lanes e causam dano alto aos inimigos.</li>
-                        <li>Cada lane tem 3 torres e a base tem 2 torres adicionais.</li>
-                        <li>Oferecem proteção e visão.</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <h3>Inibidores</h3>
-                    <ul>
-                        <li>Estruturas próximas à base.</li>
-                        <li>Quando destruídos, fazem sua lane gerar Super Minions.</li>
-                        <li>Regeneram-se após 5 minutos.</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <h3>Nexus</h3>
-                    <ul>
-                        <li>Objetivo final do jogo.</li>
-                        <li>Destruir o Nexus inimigo garante a vitória.</li>
-                        <li>Protegido por torres e inibidores.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Campeões -->
-        <div class="section" id="champions">
-            <h2>Campeões</h2>
-            <p>Os campeões são os personagens que você controla durante o jogo. Cada um possui habilidades únicas e um estilo de jogo próprio. Existem mais de 160 campeões em LoL, divididos em seis classes principais:</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <h3>Lutadores (Fighters)</h3>
-                    <p>Combinam elementos ofensivos e defensivos. Geralmente eficazes em combates sustentados.</p>
-                    <p class="example">Exemplos: Darius, Jax, Irelia, Garen, Fiora</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Tanques (Tanks)</h3>
-                    <p>Resistentes e especialistas em absorver dano. Focam em proteger o time e iniciar lutas.</p>
-                    <p class="example">Exemplos: Malphite, Leona, Ornn, Braum, Maokai</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Magos (Mages)</h3>
-                    <p>Especialistas em dano mágico de área. Geralmente têm forte controle de grupo.</p>
-                    <p class="example">Exemplos: Lux, Annie, Syndra, Orianna, Veigar</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Assassinos (Assassins)</h3>
-                    <p>Focados em eliminar alvos específicos rapidamente. Alta mobilidade e dano explosivo.</p>
-                    <p class="example">Exemplos: Zed, Katarina, LeBlanc, Akali, Talon</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Atiradores (Marksmen/ADC)</h3>
-                    <p>Causam dano físico à distância. São o foco de dano contínuo nas lutas de equipe.</p>
-                    <p class="example">Exemplos: Jinx, Ashe, Ezreal, Caitlyn, Vayne</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Suportes (Supports)</h3>
-                    <p>Ajudam a equipe com cura, escudos ou controle de grupo. Protegem e potencializam aliados.</p>
-                    <p class="example">Exemplos: Soraka, Thresh, Nami, Lulu, Yuumi</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Dano e Resistências -->
-        <div class="section" id="damage">
-            <h2>Tipos de Dano e Resistências</h2>
-            <p>Existem três tipos principais de dano em League of Legends, cada um interagindo de forma diferente com as resistências dos campeões:</p>
-            
-            <div class="damage-type">
-                <div class="damage-icon physical">AD</div>
-                <div>
-                    <h3>Dano Físico (AD - Attack Damage)</h3>
-                    <p>Vem principalmente de ataques básicos e de algumas habilidades. Reduzido pela estatística de Armadura. Itens com AD geralmente são vermelhos/laranjas na loja.</p>
-                </div>
-            </div>
-            
-            <div class="damage-type">
-                <div class="damage-icon magical">AP</div>
-                <div>
-                    <h3>Dano Mágico (AP - Ability Power)</h3>
-                    <p>Vem principalmente de habilidades mágicas. Reduzido pela estatística de Resistência Mágica. Itens com AP geralmente são azuis/roxos na loja.</p>
-                </div>
-            </div>
-            
-            <div class="damage-type">
-                <div class="damage-icon true">DV</div>
-                <div>
-                    <h3>Dano Verdadeiro</h3>
-                    <p>Não é reduzido por nenhuma resistência. Causa exatamente o valor indicado. Geralmente limitado em quantidade para balanceamento.</p>
-                </div>
-            </div>
-            
-            <h3>Resistências</h3>
-            <div class="grid">
-                <div class="card">
-                    <h3>Armadura</h3>
-                    <p>Reduz o dano físico recebido. Quanto maior a armadura, mais eficiente é a redução de dano.</p>
-                    <p>Fórmula: Redução = Armadura / (100 + Armadura)</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Resistência Mágica</h3>
-                    <p>Reduz o dano mágico recebido. Funciona da mesma forma que a armadura, mas para dano mágico.</p>
-                    <p>Fórmula: Redução = RM / (100 + RM)</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Feitiços de Invocador -->
-        <div class="section" id="spells">
-            <h2>Feitiços de Invocador</h2>
-            <p>São habilidades adicionais que você escolhe antes da partida. Cada jogador seleciona 2 feitiços com longos tempos de recarga:</p>
-            
-            <div class="spell">
-                <div class="spell-icon">F</div>
-                <div class="spell-details">
-                    <h4>Flash</h4>
-                    <p>Teleporta seu campeão uma curta distância. Usado para escapar, perseguir ou fazer jogadas.</p>
-                    <p class="cooldown">Tempo de recarga: 5 minutos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">I</div>
-                <div class="spell-details">
-                    <h4>Ignite</h4>
-                    <p>Causa dano verdadeiro ao longo do tempo e reduz cura. Bom para garantir abates.</p>
-                    <p class="cooldown">Tempo de recarga: 3 minutos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">TP</div>
-                <div class="spell-details">
-                    <h4>Teleport</h4>
-                    <p>Teleporta para uma estrutura aliada, sentinela ou minion. Útil para mobilidade global.</p>
-                    <p class="cooldown">Tempo de recarga: 6 minutos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">S</div>
-                <div class="spell-details">
-                    <h4>Smite</h4>
-                    <p>Causa dano alto a monstros da selva. Essencial para junglers.</p>
-                    <p class="cooldown">Tempo de recarga: 15 segundos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">H</div>
-                <div class="spell-details">
-                    <h4>Heal</h4>
-                    <p>Restaura vida para você e um aliado próximo. Popular entre atiradores.</p>
-                    <p class="cooldown">Tempo de recarga: 4 minutos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">B</div>
-                <div class="spell-details">
-                    <h4>Barrier</h4>
-                    <p>Cria um escudo temporário. Bom para sobreviver a explosões de dano.</p>
-                    <p class="cooldown">Tempo de recarga: 3 minutos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">C</div>
-                <div class="spell-details">
-                    <h4>Cleanse</h4>
-                    <p>Remove efeitos de controle de grupo. Útil contra times com muito controle.</p>
-                    <p class="cooldown">Tempo de recarga: 3,5 minutos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">E</div>
-                <div class="spell-details">
-                    <h4>Exhaust</h4>
-                    <p>Reduz o dano causado por um inimigo. Excelente contra assassinos.</p>
-                    <p class="cooldown">Tempo de recarga: 3,5 minutos</p>
-                </div>
-            </div>
-            
-            <div class="spell">
-                <div class="spell-icon">G</div>
-                <div class="spell-details">
-                    <h4>Ghost</h4>
-                    <p>Aumenta velocidade de movimento por alguns segundos. Bom para perseguir ou fugir.</p>
-                    <p class="cooldown">Tempo de recarga: 3,5 minutos</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Sistema de Runas -->
-        <div class="section" id="runes">
+        </section>
+
+        <section id="runes" class="content-section">
             <h2>Sistema de Runas</h2>
-            <p>As runas são modificadores de atributo e efeitos especiais que personalizam seu estilo de jogo. Antes da partida, você configura uma página de runas que complementa seu campeão e estratégia.</p>
-            
-            <div class="tab-container">
-                <div class="tab-header">
-                    <div class="tab active" data-tab="precision">Precisão</div>
-                    <div class="tab" data-tab="domination">Dominação</div>
-                    <div class="tab" data-tab="sorcery">Feitiçaria</div>
-                    <div class="tab" data-tab="resolve">Determinação</div>
-                    <div class="tab" data-tab="inspiration">Inspiração</div>
+            <div class="runes-container">
+                <div class="rune-tree">
+                    <h3>Árvores de Runas</h3>
+                    <div class="card">
+                        <h4>Precisão</h4>
+                        <p>Focada em dano sustentado e velocidade de ataque</p>
+                        <span class="rune-example">Exemplos: Agilidade Mental, Lenda: Espontaneidade</span>
+                    </div>
+                    <div class="card">
+                        <h4>Dominação</h4>
+                        <p>Focada em burst e caça</p>
+                        <span class="rune-example">Exemplos: Eletrocutar, Gosto de Sangue</span>
+                    </div>
+                    <div class="card">
+                        <h4>Feitiçaria</h4>
+                        <p>Focada em habilidades e cooldown</p>
+                        <span class="rune-example">Exemplos: Cometa Arcano, Transcendência</span>
+                    </div>
+                    <div class="card">
+                        <h4>Determinação</h4>
+                        <p>Focada em defesa e sustentação</p>
+                        <span class="rune-example">Exemplos: Resguardo, Demolir</span>
+                    </div>
+                    <div class="card">
+                        <h4>Inspiração</h4>
+                        <p>Focada em utilitários únicos</p>
+                        <span class="rune-example">Exemplos: Kleptopata, Calçado Mágico</span>
+                    </div>
                 </div>
-                
-                <div class="tab-content active" id="precision">
-                  <h3>Precisão (Amarelo)</h3>
-                  <p>Foco em ataques sustentados e dano contínuo.</p>
-                  <p>Ideal para: Atiradores, alguns lutadores e campeões baseados em ataque.</p>
-                  <p>Runas Chave: Pressione o Ataque, Ritmo Fatal, Conquistador</p>
-                </div>
-                
-                <div class="tab-content" id="domination">
-                  <h3>Dominação (Vermelho)</h3>
-                  <p>Foco em dano explosivo e assassinato.</p>
-                  <p>Ideal para: Assassinos, magos de burst e junglers agressivos.</p>
-                  <p>Runas Chave: Eletrocutar, Predador, Colheita Sombria</p>
-                </div>
-
-                <div class="tab-content" id="sorcery">
-                  <h3>Feitiçaria (Azul)</h3>
-                  <p>Foco em poder de habilidade e utilidade.</p>
-                  <p>Ideal para: Magos, suportes de poke e campeões que dependem de habilidades.</p>
-                  <p>Runas Chave: Invocar Aery, Cometa Arcano, Ímpeto Gradual</p>
-                </div>
-
-                <div class="tab-content" id="resolve">
-                  <h3>Determinação (Verde)</h3>
-                  <p>Foco em durabilidade e sobrevivência.</p>
-                  <p>Ideal para: Tanques, suportes defensivos e lutadores resistentes.</p>
-                  <p>Runas Chave: Aperto dos Mortos-Vivos, Guardião, Pós-Choque</p>
-                </div>
-
-                <div class="tab-content" id="inspiration">
-                  <h3>Inspiração (Ciano)</h3>
-                  <p>Foco em utilidade e manipulação de regras do jogo.</p>
-                  <p>Ideal para: Suportes utilitários e campeões que se beneficiam de itens ativos.</p>
-                  <p>Runas Chave: Glacial Aumentado, Livro de Feitiços Deslacrado, Primeiro Ataque</p>
-                </div>
-              </div>
             </div>
+        </section>
 
-            
+        <section id="spells" class="content-section">
+            <h2>Feitiços de Invocador</h2>
+            <div class="spells-grid">
+                <div class="spell-card">
+                    <h3>Flash</h3>
+                    <p>Teleporta instantaneamente para uma curta distância. O feitiço mais importante do jogo!</p>
+                    <span class="cooldown">Cooldown: 300s</span>
+                </div>
+                <div class="spell-card">
+                    <h3>Ignite</h3>
+                    <p>Causa dano verdadeiro ao longo do tempo e reduz cura.</p>
+                    <span class="cooldown">Cooldown: 180s</span>
+                </div>
+                <div class="spell-card">
+                    <h3>Heal</h3>
+                    <p>Restaura vida sua e de um aliado próximo.</p>
+                    <span class="cooldown">Cooldown: 240s</span>
+                </div>
+                <div class="spell-card">
+                    <h3>Teleport</h3>
+                    <p>Teleporta para um aliado, estrutura ou tropas.</p>
+                    <span class="cooldown">Cooldown: 360s</span>
+                </div>
+                <div class="spell-card">
+                    <h3>Barrier</h3>
+                    <p>Cria um escudo temporário.</p>
+                    <span class="cooldown">Cooldown: 180s</span>
+                </div>
+                <div class="spell-card">
+                    <h3>Exhaust</h3>
+                    <p>Reduz drasticamente o dano de um inimigo.</p>
+                    <span class="cooldown">Cooldown: 210s</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="damage" class="content-section">
+            <h2>Tipos de Dano e Resistências</h2>
+            <div class="damage-types">
+                <div class="damage-card physical">
+                    <h3>Dano Físico (AD)</h3>
+                    <p>Baseado em Attack Damage (AD). Resistido por Armadura.</p>
+                    <ul>
+                        <li>Ataques básicos da maioria dos campeões</li>
+                        <li>Habilidades de ADCs e alguns assassinos</li>
+                        <li>Itens de armadura reduzem este dano</li>
+                    </ul>
+                </div>
+                <div class="damage-card magical">
+                    <h3>Dano Mágico (AP)</h3>
+                    <p>Baseado em Ability Power (AP). Resistido por Resistência Mágica.</p>
+                    <ul>
+                        <li>Habilidades de magos</li>
+                        <li>Alguns ataques especiais</li>
+                        <li>Itens de RM reduzem este dano</li>
+                    </ul>
+                </div>
+                <div class="damage-card true">
+                    <h3>Dano Verdadeiro</h3>
+                    <p>Não é resistido por nada. Sempre causa o valor total.</p>
+                    <ul>
+                        <li>Algumas habilidades especiais</li>
+                        <li>Ignite, Smite</li>
+                        <li>Não pode ser reduzido!</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="champions" class="content-section">
+            <h2>Classes de Campeões</h2>
+            <div class="champions-grid">
+                <div class="champion-class">
+                    <h3>Marksman (ADC)</h3>
+                    <p>Dano físico à distância. Principal fonte de dano da equipe.</p>
+                    <div class="champion-example">Ex: Jinx, Ashe, Jhin</div>
+                </div>
+                <div class="champion-class">
+                    <h3>Support</h3>
+                    <p>Protege e auxilia a equipe. Controla visão de mapa.</p>
+                    <div class="champion-example">Ex: Thresh, Lulu, Braum</div>
+                </div>
+                <div class="champion-class">
+                    <h3>Mid Laner</h3>
+                    <p>Mago ou assassino. Controla o centro do mapa.</p>
+                    <div class="champion-example">Ex: Ahri, Yasuo, Azir</div>
+                </div>
+                <div class="champion-class">
+                    <h3>Top Laner</h3>
+                    <p>Tank ou lutador. Geralmente joga sozinho.</p>
+                    <div class="champion-example">Ex: Garen, Darius, Fiora</div>
+                </div>
+                <div class="champion-class">
+                    <h3>Jungler</h3>
+                    <p>Percorre a jungle. Ganka as lanes.</p>
+                    <div class="champion-example">Ex: Lee Sin, Graves, Amumu</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lanes" class="content-section">
+            <h2>As Lanes do Mapa</h2>
+            <div class="lanes-container">
+                <div class="map-representation">
+                    <div class="lane top-lane">
+                        <h3>Top Lane</h3>
+                        <p>Lane superior. Geralmente 1v1. Foco em farm e escala.</p>
+                    </div>
+                    <div class="lane jungle">
+                        <h3>Jungle</h3>
+                        <p>Área entre as lanes. Monstros neutros e objetivos.</p>
+                    </div>
+                    <div class="lane mid-lane">
+                        <h3>Mid Lane</h3>
+                        <p>Lane central. Lane mais curta. Fácil de gankar e ajudar outras lanes.</p>
+                    </div>
+                    <div class="lane bot-lane">
+                        <h3>Bot Lane</h3>
+                        <p>Lane inferior. Duo lane (ADC + Support). Dragon próximo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="minions" class="content-section">
+            <h2>Minions e Gold</h2>
+            <div class="minions-gold">
+                <div class="card">
+                    <h3>Tipos de Minions</h3>
+                    <ul>
+                        <li><strong>Melee Minions:</strong> 21-22 gold</li>
+                        <li><strong>Caster Minions:</strong> 14-15 gold</li>
+                        <li><strong>Cannon Minions:</strong> 60-90 gold (spawn a cada 3 waves)</li>
+                        <li><strong>Super Minions:</strong> 25-40 gold (quando inibidor é destruído)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Importância do Gold</h3>
+                    <ul>
+                        <li>Compra de itens</li>
+                        <li>Melhoria de habilidades</li>
+                        <li>Controle de objetivos</li>
+                        <li>Vantagem sobre inimigos</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Last Hit</h3>
+                    <p>A técnica mais importante! Você só ganha gold se der o último hit no minion. Pratique no training mode!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Boa sorte no Rift, Invocador! 🎮</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
