@@ -1,4 +1,208 @@
-* {
+.rune-tree.inspiracao {
+    border-color: #5bc0de;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(91, 192, 222, 0.1));
+}
+
+/* Nova estrutura para runas menores */
+.rune-grid-minor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.rune-row {
+    background-color: rgba(205, 190, 145, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(70, 55, 20, 0.2);
+    margin-bottom: 1rem;
+}
+
+.rune-minor-group h5 {
+    color: #C8A964;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.rune-minor-item {
+    background-color: rgba(30, 45, 80, 0.3);
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.rune-minor-item:hover {
+    background-color: rgba(30, 45, 80, 0.5);
+    transform: translateX(5px);
+}
+
+.rune-minor-item strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: #CDBE91;
+}
+
+.rune-minor-item p {
+    color: #a09b8c;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}/* Runas específicas - Nova estrutura completa */
+.runes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.rune-system-overview {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.rune-tree {
+    background-color: rgba(30, 45, 80, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.rune-tree.precisao {
+    border-color: #f1c40f;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(241, 196, 15, 0.1));
+}
+
+.rune-tree.dominacao {
+    border-color: #e74c3c;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(231, 76, 60, 0.1));
+}
+
+.rune-tree.feiticaria {
+    border-color: #3498db;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(52, 152, 219, 0.1));
+}
+
+.rune-tree.determinacao {
+    border-color: #2ecc71;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(46, 204, 113, 0.1));
+}
+
+.rune-tree.inspiracao {
+    border-color: #5bc0de;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(91, 192, 222, 0.1));
+}
+
+/* Nova estrutura para runas menores */
+.rune-grid-minor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.rune-row {
+    background-color: rgba(205, 190, 145, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(70, 55, 20, 0.2);
+}
+
+.rune-minor-group h5 {
+    color: #C8A964;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.rune-minor-item {
+    background-color: rgba(30, 45, 80, 0.3);
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.rune-minor-item:hover {
+    background-color: rgba(30, 45, 80, 0.5);
+    transform: translateX(5px);
+}
+
+.rune-minor-item strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: #CDBE91;
+}
+
+.rune-minor-item p {
+    color: #a09b8c;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Cores específicas das bordas para runas menores por árvore */
+.rune-tree.precisao .rune-minor-item {
+    border-left-color: #f1c40f;
+}
+
+.rune-tree.dominacao .rune-minor-item {
+    border-left-color: #e74c3c;
+}
+
+.rune-tree.feiticaria .rune-minor-item {
+    border-left-color: #3498db;
+}
+
+.rune-tree.determinacao .rune-minor-item {
+    border-left-color: #2ecc71;
+}
+
+.rune-tree.inspiracao .rune-minor-item {
+    border-left-color: #5bc0de;
+}
+
+/* Cores dos nomes das runas por árvore */
+.rune-tree.precisao .rune-minor-item strong {
+    color: #f1c40f;
+}
+
+.rune-tree.dominacao .rune-minor-item strong {
+    color: #e74c3c;
+}
+
+.rune-tree.feiticaria .rune-minor-item strong {
+    color: #3498db;
+}
+
+.rune-tree.determinacao .rune-minor-item strong {
+    color: #2ecc71;
+}
+
+.rune-tree.inspiracao .rune-minor-item strong {
+    color: #5bc0de;
+}
+
+/* Responsividade para runas menores */
+@media (max-width: 768px) {
+    .rune-minor-item {
+        padding: 0.6rem;
+    }
+    
+    .rune-minor-item strong {
+        font-size: 0.9rem;
+    }
+    
+    .rune-minor-item p {
+        font-size: 0.8rem;
+    }
+}* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -146,25 +350,217 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Runas específicas */
+/* Runas específicas - Nova estrutura */
 .runes-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.rune-system-overview {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .rune-tree {
+    background-color: rgba(30, 45, 80, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.rune-tree.precisao {
+    border-color: #f1c40f;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(241, 196, 15, 0.1));
+}
+
+.rune-tree.dominacao {
+    border-color: #e74c3c;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(231, 76, 60, 0.1));
+}
+
+.rune-tree.feiticaria {
+    border-color: #3498db;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(52, 152, 219, 0.1));
+}
+
+.rune-tree.determinacao {
+    border-color: #2ecc71;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(46, 204, 113, 0.1));
+}
+
+.rune-tree.inspiracao {
+    border-color: #5bc0de;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(255, 127, 80, 0.1));
+}
+
+.rune-tree h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.rune-category {
+    margin-bottom: 2rem;
+}
+
+.rune-category h4 {
+    color: #C8A964;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #463714;
+    padding-bottom: 0.5rem;
+}
+
+.rune-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.rune-example {
+.rune-item {
+    background-color: rgba(70, 55, 20, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #C8A964;
+    transition: all 0.3s ease;
+}
+
+.rune-item:hover {
+    background-color: rgba(70, 55, 20, 0.5);
+    transform: translateY(-2px);
+}
+
+.rune-item strong {
     display: block;
-    margin-top: 0.5rem;
-    font-style: italic;
+    color: #C8A964;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.rune-item p {
     color: #a09b8c;
     font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.rune-use {
+    color: #CDBE91;
+    font-style: italic;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.rune-row {
+    background-color: rgba(205, 190, 145, 0.1);
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.rune-minor {
+    color: #a09b8c;
+    font-size: 0.9rem;
+}
+
+.rune-tips {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.rune-tips .card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rune-tips ul li {
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+
+.rune-tips ul li strong {
+    color: #C8A964;
+}
+
+/* Novidades 2025 */
+.rune-updates-2025 .card {
+    background: linear-gradient(145deg, #1e2d50, #2d4a7c);
+    border: 2px solid #f39c12;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.rune-updates-2025 h3 {
+    color: #f39c12;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .rune-tree {
+        padding: 1rem;
+    }
+    
+    .rune-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rune-tree h3 {
+        font-size: 1.5rem;
+    }
+    
+    .rune-row {
+        padding: 0.8rem;
+    }
+}
+
+/* Enhanced hover effects for runes */
+.rune-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.rune-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(200, 169, 100, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.rune-item:hover::before {
+    left: 100%;
+}
+
+/* Tree path colors for minor runes */
+.rune-tree.precisao .rune-minor strong {
+    color: #f1c40f;
+}
+
+.rune-tree.dominacao .rune-minor strong {
+    color: #e74c3c;
+}
+
+.rune-tree.feiticaria .rune-minor strong {
+    color: #3498db;
+}
+
+.rune-tree.determinacao .rune-minor strong {
+    color: #2ecc71;
+}
+
+.rune-tree.inspiracao .rune-minor strong {
+    color: #5bc0de;
 }
 
 /* Feitiços específicos */
@@ -221,7 +617,7 @@ ul li {
 }
 
 .damage-card.true {
-    border-color: #9f4f96;
+    border-color: #ffffff;
 }
 
 .damage-card h3 {

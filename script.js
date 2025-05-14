@@ -106,17 +106,170 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial progress update
     updateProgress();
     
-    // Rune interaction
-    const runeCards = document.querySelectorAll('#runes .card');
-    runeCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            card.style.background = 'linear-gradient(135deg, #1e2d50, #463714)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            card.style.background = '#1e2d50';
+    // Enhanced rune interactions
+    const runeItems = document.querySelectorAll('.rune-item');
+    runeItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const runeName = item.querySelector('strong').textContent;
+            const runeDesc = item.querySelector('p').textContent;
+            
+            // Create detailed popup
+            const popup = document.createElement('div');
+            popup.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #1e2d50;
+                color: #CDBE91;
+                padding: 2rem;
+                border-radius: 15px;
+                border: 2px solid #C8A964;
+                max-width: 400px;
+                z-index: 10000;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            `;
+            
+            popup.innerHTML = `
+                <h3 style="color: #C8A964; margin-bottom: 1rem;">${runeName}</h3>
+                <p style="margin-bottom: 1rem;">${runeDesc}</p>
+                <div style="text-align: center;">
+                    <button onclick="${popup.remove()}" style="
+                        background: #C8A964;
+                        color: #0F1B3C;
+                        border: none;
+                        padding: 0.5rem 1rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-weight: bold;
+                    ">Fechar</button>
+                </div>
+            `;
+            
+            document.body.appendChild(popup);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (popup.parentNode) {
+                    popup.parentNode.removeChild(popup);
+                }
+            }, 5000);
         });
     });
+    
+    // Interactive rune tree selector
+    function createRuneSelector() {
+        const selectorButton = document.createElement('button');
+        selectorButton.textContent = '🎯 Construir Página de Runas';
+        selectorButton.style.cssText = `
+            position: fixed;
+            bottom: 150px;
+            right: 20px;
+            background: #f1c40f;
+            color: #0F1B3C;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        `;
+        
+        selectorButton.addEventListener('click', showRuneBuilder);
+        document.body.appendChild(selectorButton);
+    }
+    
+    function showRuneBuilder() {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 27, 60, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        `;
+        
+        const builder = document.createElement('div');
+        builder.style.cssText = `
+            background: #1e2d50;
+            color: #CDBE91;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 2px solid #C8A964;
+        `;
+        
+        builder.innerHTML = `
+            <h3 style="color: #C8A964; text-align: center; margin-bottom: 2rem;">Construtor de Runas</h3>
+            <div class="rune-build-step">
+                <h4>Passo 1: Escolha sua Árvore Primária</h4>
+                <div class="tree-options">
+                    <button class="tree-btn" data-tree="precisao">🎯 Precisão</button>
+                    <button class="tree-btn" data-tree="dominacao">⚔️ Dominação</button>
+                    <button class="tree-btn" data-tree="feiticaria">✨ Feitiçaria</button>
+                    <button class="tree-btn" data-tree="determinacao">🛡️ Determinação</button>
+                    <button class="tree-btn" data-tree="inspiracao">💡 Inspiração</button>
+                </div>
+            </div>
+            
+            <div class="rune-build-result" style="margin-top: 2rem; padding: 1rem; background: rgba(200, 169, 100, 0.1); border-radius: 5px; display: none;">
+                <h4>Sua Página de Runas:</h4>
+                <div id="selected-runes"></div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <button onclick="${overlay.remove()}" style="background: #C8A964; color: #0F1B3C; border: none; padding: 0.7rem 1.5rem; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                    Fechar
+                </button>
+            </div>
+        `;
+        
+        // Add tree selection logic
+        const treeButtons = builder.querySelectorAll('.tree-btn');
+        treeButtons.forEach(btn => {
+            btn.style.cssText = `
+                display: block;
+                width: 100%;
+                padding: 1rem;
+                margin: 0.5rem 0;
+                background: #463714;
+                color: #CDBE91;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            `;
+            
+            btn.addEventListener('click', function() {
+                const tree = btn.getAttribute('data-tree');
+                const result = builder.querySelector('.rune-build-result');
+                const selectedDiv = builder.querySelector('#selected-runes');
+                
+                result.style.display = 'block';
+                selectedDiv.innerHTML = `<p>Árvore Primária: <strong>${btn.textContent}</strong></p>`;
+                
+                // Highlight selected button
+                treeButtons.forEach(b => b.style.background = '#463714');
+                btn.style.background = '#C8A964';
+                btn.style.color = '#0F1B3C';
+            });
+        });
+        
+        overlay.appendChild(builder);
+        document.body.appendChild(overlay);
+    }
+    
+    // Add rune selector button
+    createRuneSelector();
     
     // Spell cooldown animation
     const spellCards = document.querySelectorAll('.spell-card');

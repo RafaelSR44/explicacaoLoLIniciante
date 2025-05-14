@@ -1,240 +1,666 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League of Legends - Guia Completo</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League of Legends - Guia Completo</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>League of Legends</h1>
-        <p>Guia Básico para Iniciantes</p>
-    </header>
+  <header>
+    <h1>League of Legends</h1>
+    <p>Guia Básico para Iniciantes</p>
+  </header>
 
-    <nav>
-        <button class="nav-btn active" data-section="overview">Visão Geral</button>
-        <button class="nav-btn" data-section="runes">Runas</button>
-        <button class="nav-btn" data-section="spells">Feitiços</button>
-        <button class="nav-btn" data-section="damage">Tipos de Dano</button>
-        <button class="nav-btn" data-section="champions">Campeões</button>
-        <button class="nav-btn" data-section="lanes">Lanes</button>
-        <button class="nav-btn" data-section="minions">Minions e Gold</button>
-    </nav>
+  <nav>
+    <button class="nav-btn active" data-section="overview">Visão Geral</button>
+    <button class="nav-btn" data-section="runes">Runas</button>
+    <button class="nav-btn" data-section="spells">Feitiços</button>
+    <button class="nav-btn" data-section="damage">Tipos de Dano</button>
+    <button class="nav-btn" data-section="champions">Campeões</button>
+    <button class="nav-btn" data-section="lanes">Lanes</button>
+    <button class="nav-btn" data-section="minions">Minions e Gold</button>
+  </nav>
 
-    <main>
-        <section id="overview" class="content-section active">
-            <h2>Visão Geral do Jogo</h2>
-            <div class="content-grid">
-                <div class="card">
-                    <h3>O que é League of Legends?</h3>
-                    <p>League of Legends (LoL) é um jogo MOBA (Multiplayer Online Battle Arena) onde duas equipes de 5 jogadores competem para destruir o Nexus inimigo.</p>
-                    <img src="mapaLol.png" alt="Mapa do LoL">
-                </div>
-                <div class="card">
-                    <h3>Objetivo Principal</h3>
-                    <ul>
-                        <li>Destruir torres inimigas</li>
-                        <li>Matar minions para ouro e experiência</li>
-                        <li>Trabalhar em equipe</li>
-                        <li>Destruir o Nexus inimigo</li>
-                    </ul>
-                    <img src="objetivos.png" alt="imagem de objetivo">
-                </div>
+  <main>
+    <section id="overview" class="content-section active">
+      <h2>Visão Geral do Jogo</h2>
+      <div class="content-grid">
+        <div class="card">
+          <h3>O que é League of Legends?</h3>
+          <p>League of Legends (LoL) é um jogo MOBA (Multiplayer Online Battle Arena) onde duas equipes de 5 jogadores
+            competem para destruir o Nexus inimigo.</p>
+          <img src="mapaLol.png" alt="Mapa do LoL">
+        </div>
+        <div class="card">
+          <h3>Objetivo Principal</h3>
+          <ul>
+            <li>Destruir torres inimigas</li>
+            <li>Matar minions para ouro e experiência</li>
+            <li>Trabalhar em equipe</li>
+            <li>Destruir o Nexus inimigo</li>
+            <img src="objetivos.png" alt="Mapa do LoL">
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="runes" class="content-section">
+      <h2>Sistema de Runas</h2>
+      <p style="text-align: center; margin-bottom: 2rem; color: #a09b8c;">
+        Runas oferecem efeitos passivos adaptados às forças e papel do seu campeão. Você escolhe 1 árvore primária e 1
+        secundária, além de fragmentos estatísticos.
+      </p>
+
+      <div class="rune-system-overview">
+        <div class="card">
+          <h3>Como Funciona?</h3>
+          <ul>
+            <li><strong>Árvore Primária:</strong> Escolha 1 runa chave (keystone) + 3 runas menores</li>
+            <li><strong>Árvore Secundária:</strong> Escolha 2 runas menores de outra árvore</li>
+            <li><strong>Fragmentos Estatísticos:</strong> 3 shards que afinam sua build</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="runes-container">
+        <div class="rune-tree precisao">
+          <h3>🎯 Precisão (Precision)</h3>
+          <div class="rune-category">
+            <h4>Runas Chave (Escolha 1)</h4>
+            <div class="rune-grid">
+              <div class="rune-item">
+                <strong>Precione o Ataque</strong>
+                <p>Atingir um campeão inimigo com 3 ataques básicos consecutivos causa dano adaptativo bônus e amplifica
+                  o dano que você causa até sair de combate.</p>
+                <span class="rune-use">Use em: ADCs e lutadores que focam em duelos 1v1</span>
+              </div>
+              <div class="rune-item">
+                <strong>Ritimo Fatal</strong>
+                <p>Atacar um campeão inimigo ganha uma stack de Tempo Letal por 6 segundos, até 6 stacks. Cada stack
+                  garante 5% de AS. Com stacks máximas, ataques também disparam uma nota que causa dano.</p>
+                <span class="rune-use">Use em: Campeões baseados em velocidade de ataque</span>
+              </div>
+              <div class="rune-item">
+                <strong>Agilidade nos Pés</strong>
+                <p>Atacar e se mover gera stacks de energia. Com 100 stacks, seu próximo ataque cura você e garante
+                  velocidade de movimento aumentada.</p>
+                <span class="rune-use">Use em: ADCs sustentados que precisam de mobilidade</span>
+              </div>
+              <div class="rune-item">
+                <strong>Conquistador</strong>
+                <p>Ganha stacks de força adaptativa ao atacar campeões inimigos. Após alcançar 12 stacks, cura uma parte
+                  do dano causado a campeões.</p>
+                <span class="rune-use">Use em: Lutadores que ficam muito tempo em combate</span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="runes" class="content-section">
-            <h2>Sistema de Runas</h2>
-            <div class="runes-container">
-                <div class="rune-tree">
-                    <h3>Árvores de Runas</h3>
-                    <div class="card">
-                        <h4>Precisão</h4>
-                        <p>Focada em dano sustentado e velocidade de ataque</p>
-                        <span class="rune-example">Exemplos: Agilidade Mental, Lenda: Espontaneidade</span>
-                    </div>
-                    <div class="card">
-                        <h4>Dominação</h4>
-                        <p>Focada em burst e caça</p>
-                        <span class="rune-example">Exemplos: Eletrocutar, Gosto de Sangue</span>
-                    </div>
-                    <div class="card">
-                        <h4>Feitiçaria</h4>
-                        <p>Focada em habilidades e cooldown</p>
-                        <span class="rune-example">Exemplos: Cometa Arcano, Transcendência</span>
-                    </div>
-                    <div class="card">
-                        <h4>Determinação</h4>
-                        <p>Focada em defesa e sustentação</p>
-                        <span class="rune-example">Exemplos: Resguardo, Demolir</span>
-                    </div>
-                    <div class="card">
-                        <h4>Inspiração</h4>
-                        <p>Focada em utilitários únicos</p>
-                        <span class="rune-example">Exemplos: Kleptopata, Calçado Mágico</span>
-                    </div>
+          <div class="rune-category">
+            <h4>Runas Menores</h4>
+            <div class="rune-grid-minor">
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Primeira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Absorsão Vital</strong>
+                    <p>Takedowns curam você</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Triunfo</strong>
+                    <p>Takedowns restauram vida e concedem gold extra</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Presença de Espírito</strong>
+                    <p>Takedowns ou ao causar dano a um inimigo restauram mana/energia </p>
+                  </div>
                 </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Segunda Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Lenda: Espontaneidade</strong>
+                    <p>Ganha velocidade de ataque permanente por takedowns</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Lenda: Aceleração</strong>
+                    <p>Ganha Aceleração de habilidade permanente para habilidades básicas por takedowns</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Lenda: Linhagem</strong>
+                    <p>Ganha roubo de vida por takedowns</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Terceira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Golpe de Misericórdia</strong>
+                    <p>Causa mais dano a campeões com pouca vida</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Dilacerar</strong>
+                    <p>Causa mais dano a campeões com mais vida máxima que você</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Até a morte</strong>
+                    <p>Causa mais dano quando está com pouca vida</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="spells" class="content-section">
-            <h2>Feitiços de Invocador</h2>
-            <div class="spells-grid">
-                <div class="spell-card">
-                    <h3>Flash</h3>
-                    <p>Teleporta instantaneamente para uma curta distância. O feitiço mais importante do jogo!</p>
-                    <span class="cooldown">Cooldown: 300s</span>
-                </div>
-                <div class="spell-card">
-                    <h3>Ignite</h3>
-                    <p>Causa dano verdadeiro ao longo do tempo e reduz cura.</p>
-                    <span class="cooldown">Cooldown: 180s</span>
-                </div>
-                <div class="spell-card">
-                    <h3>Heal</h3>
-                    <p>Restaura vida sua e de um aliado próximo.</p>
-                    <span class="cooldown">Cooldown: 240s</span>
-                </div>
-                <div class="spell-card">
-                    <h3>Teleport</h3>
-                    <p>Teleporta para um aliado, estrutura ou tropas.</p>
-                    <span class="cooldown">Cooldown: 360s</span>
-                </div>
-                <div class="spell-card">
-                    <h3>Barrier</h3>
-                    <p>Cria um escudo temporário.</p>
-                    <span class="cooldown">Cooldown: 180s</span>
-                </div>
-                <div class="spell-card">
-                    <h3>Exhaust</h3>
-                    <p>Reduz drasticamente o dano de um inimigo.</p>
-                    <span class="cooldown">Cooldown: 210s</span>
-                </div>
+        <div class="rune-tree dominacao">
+          <h3>⚔️ Dominação (Domination)</h3>
+          <div class="rune-category">
+            <h4>Runas Chave (Escolha 1)</h4>
+            <div class="rune-grid">
+              <div class="rune-item">
+                <strong>Eletrocutar</strong>
+                <p>Causar dano a um inimigo com 3 ataques ou habilidades diferentes em 3s causa dano adaptativo adicional. Cooldown de 20s</p>
+                </p>
+                <span class="rune-use">Use em: Assassinos e magos de burst</span>
+              </div>
+              <div class="rune-item">
+                <strong>Colheita Sombria</strong>
+                <p>Causar dano a campeões abaixo de 50% da vida causa dano adaptativo adicional e colhe a alma de sua vítima. Cooldown de 35s,
+                  resetando para 1s em takedowns.</p>
+                <span class="rune-use">Use em: Campeões de late game e poke</span>
+              </div>
+              <div class="rune-item">
+                <strong>Chuva de Laminas</strong>
+                <p>Ganha velocidade de ataque massiva para os próximos 3 ataques contra campeões. Cooldown de 10s </p>
+                <span class="rune-use">Use em: Assassinos dependentes de ataques básicos</span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="damage" class="content-section">
-            <h2>Tipos de Dano e Resistências</h2>
-            <div class="damage-types">
-                <div class="damage-card physical">
-                    <h3>Dano Físico (AD)</h3>
-                    <p>Baseado em Attack Damage (AD). Resistido por Armadura.</p>
-                    <ul>
-                        <li>Ataques básicos da maioria dos campeões</li>
-                        <li>Habilidades de ADCs e alguns assassinos</li>
-                        <li>Itens de armadura reduzem este dano</li>
-                    </ul>
+          <div class="rune-category">
+            <h4>Runas Menores</h4>
+            <div class="rune-grid-minor">
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Primeira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Golpe Desleal</strong>
+                    <p>Causa dano verdadeiro adicioal a inimigos com movimento prejudicado</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Gosto de Sangue</strong>
+                    <p>Causar dano a um campeão cura você</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Impacto Repentino</strong>
+                    <p>Dano verdadeiro extra após dash, blink ou saída de invisibilidade</p>
+                  </div>
                 </div>
-                <div class="damage-card magical">
-                    <h3>Dano Mágico (AP)</h3>
-                    <p>Baseado em Ability Power (AP). Resistido por Resistência Mágica.</p>
-                    <ul>
-                        <li>Habilidades de magos</li>
-                        <li>Alguns ataques especiais</li>
-                        <li>Itens de RM reduzem este dano</li>
-                    </ul>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Segunda Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Sentinela Profunda</strong>
+                    <p>Torna as wards colocadas no território inimigo mais resistentes (ganhando +1 de vida)</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Sexto Sentido</strong>
+                    <p>Permite rastrear wards inimigas próximas que não estejam visíveis.</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Lembrança Aterrorizante</strong>
+                    <p>Garante Aceleração de Habilidade para Trinkets após abates de campeões, acumulando infinitamente.
+                    </p>
+                  </div>
                 </div>
-                <div class="damage-card true">
-                    <h3>Dano Verdadeiro</h3>
-                    <p>Não é resistido por nada. Sempre causa o valor total.</p>
-                    <ul>
-                        <li>Algumas habilidades especiais</li>
-                        <li>Ignite, Smite</li>
-                        <li>Não pode ser reduzido!</li>
-                    </ul>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Terceira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Caçador de Tesouros</strong>
+                    <p>Takedowns únicos garantem gold extra da primeira vez que são coletadas</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Caçador Incansável</strong>
+                    <p>Takedowns únicos garantem Velocidade de movimento permanente fora de combate</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Caçador Supremo</strong>
+                    <p>Takedowns únicos reduzem o CD da ultimate</p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="champions" class="content-section">
-            <h2>Classes de Campeões</h2>
-            <div class="champions-grid">
-                <div class="champion-class">
-                    <h3>Marksman (ADC)</h3>
-                    <p>Dano físico à distância. Principal fonte de dano da equipe.</p>
-                    <div class="champion-example">Ex: Jinx, Ashe, Jhin</div>
-                </div>
-                <div class="champion-class">
-                    <h3>Support</h3>
-                    <p>Protege e auxilia a equipe. Controla visão de mapa.</p>
-                    <div class="champion-example">Ex: Thresh, Lulu, Braum</div>
-                </div>
-                <div class="champion-class">
-                    <h3>Mid Laner</h3>
-                    <p>Mago ou assassino. Controla o centro do mapa.</p>
-                    <div class="champion-example">Ex: Ahri, Yasuo, Azir</div>
-                </div>
-                <div class="champion-class">
-                    <h3>Top Laner</h3>
-                    <p>Tank ou lutador. Geralmente joga sozinho.</p>
-                    <div class="champion-example">Ex: Garen, Darius, Fiora</div>
-                </div>
-                <div class="champion-class">
-                    <h3>Jungler</h3>
-                    <p>Percorre a jungle. Ganka as lanes.</p>
-                    <div class="champion-example">Ex: Lee Sin, Graves, Amumu</div>
-                </div>
+        <div class="rune-tree feiticaria">
+          <h3>✨ Feitiçaria (Sorcery)</h3>
+          <div class="rune-category">
+            <h4>Runas Chave (Escolha 1)</h4>
+            <div class="rune-grid">
+              <div class="rune-item">
+                <strong>Cometa Arcano</strong>
+                <p>Causar dano com habilidades invoca um cometa no alvo. Cooldown de 20-8s.</p>
+                <span class="rune-use">Use em: Magos de poke como Xerath</span>
+              </div>
+              <div class="rune-item">
+                <strong>Invocar Aery</strong>
+                <p>Seus ataques e habilidades enviam o Aery até um alvo, causanso dano a
+                  inimigos ou protegendo aliados.</p>
+                <span class="rune-use">Use em: Supports encantadores como Karma e Lulu</span>
+              </div>
+              <div class="rune-item">
+                <strong>Phase Rush</strong>
+                <p>Depois de causar dano com 3 habilidades separadas ou ataques, ganha Velocidade de movimento massiva e resistência a slows.
+                  Cooldown de 30-10s.</p>
+                <span class="rune-use">Use em: Campeões que se baneficiam de mobilidade como Gragas</span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="lanes" class="content-section">
-            <h2>As Lanes do Mapa</h2>
-            <div class="lanes-container">
-                <div class="map-representation">
-                    <div class="lane top-lane">
-                        <h3>Top Lane</h3>
-                        <p>Lane superior. Geralmente 1v1. Foco em farm e escala.</p>
-                    </div>
-                    <div class="lane jungle">
-                        <h3>Jungle</h3>
-                        <p>Área entre as lanes. Monstros neutros e objetivos.</p>
-                    </div>
-                    <div class="lane mid-lane">
-                        <h3>Mid Lane</h3>
-                        <p>Lane central. Lane mais curta. Fácil de gankar e ajudar outras lanes.</p>
-                    </div>
-                    <div class="lane bot-lane">
-                        <h3>Bot Lane</h3>
-                        <p>Lane inferior. Duo lane (ADC + Support). Dragon próximo.</p>
-                    </div>
+          <div class="rune-category">
+            <h4>Runas Menores</h4>
+            <div class="rune-grid-minor">
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Primeira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Arcanista do Axioma</strong>
+                    <p>Nova runa para magos: aumenta dano/cura/escudo da ultimate e reduz seu CD com takedowns</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Faixa de Fluxo de Mana</strong>
+                    <p>Acertar um campeão ganha mana máxima permanente</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Manto de Nuvens</strong>
+                    <p>Usar summoners gera velocidade de movimento</p>
+                  </div>
                 </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Segunda Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Transcendência</strong>
+                    <p>Ganha habilidade apressada nos níveis 5 e 8. CDR em excesso vira força adaptativa</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Celeridade</strong>
+                    <p>Ganha velocidade de movimento baseado em bônus de MS</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Foco Absoluto</strong>
+                    <p>Ganha AD/AP quando acima de 70% da vida</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Terceira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Chamuscar</strong>
+                    <p>Primeira habilidade a cada 10 segundos queima campeões</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Caminhar Sobre Águas</strong>
+                    <p>Ganha MS e AD/AP no rio</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Tempestade Crescente</strong>
+                    <p>Ganha quantidades crescentes de AD ou AP ao longo do jogo</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="minions" class="content-section">
-            <h2>Minions e Gold</h2>
-            <div class="minions-gold">
-                <div class="card">
-                    <h3>Tipos de Minions</h3>
-                    <ul>
-                        <li><strong>Melee Minions:</strong> 21-22 gold</li>
-                        <li><strong>Caster Minions:</strong> 14-15 gold</li>
-                        <li><strong>Cannon Minions:</strong> 60-90 gold (spawn a cada 3 waves)</li>
-                        <li><strong>Super Minions:</strong> 25-40 gold (quando inibidor é destruído)</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Importância do Gold</h3>
-                    <ul>
-                        <li>Compra de itens</li>
-                        <li>Melhoria de habilidades</li>
-                        <li>Controle de objetivos</li>
-                        <li>Vantagem sobre inimigos</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Last Hit</h3>
-                    <p>A técnica mais importante! Você só ganha gold se der o último hit no minion. Pratique no training mode!</p>
-                </div>
+        <div class="rune-tree determinacao">
+          <h3>🛡️ Determinação (Resolve)</h3>
+          <div class="rune-category">
+            <h4>Runas Chave (Escolha 1)</h4>
+            <div class="rune-grid">
+              <div class="rune-item">
+                <strong>Grasp of the Undying</strong>
+                <p>A cada 3s em combate você gera uma stack. Com 4 stacks, próximo ataque básico consome todas para
+                  causar dano bônus.</p>
+                <span class="rune-use">Use em: Tanks e bruisers como Sion e Ornn</span>
+              </div>
+              <div class="rune-item">
+                <strong>Aftershock</strong>
+                <p>Similar ao Coragem do Colosso, ideal para campeões de engage com muito CC que querem resistência para
+                  sair vivos.</p>
+                <span class="rune-use">Use em: Supports tanques como Leona e Thresh</span>
+              </div>
+              <div class="rune-item">
+                <strong>Guardian</strong>
+                <p>Você e aliados próximos ganham escudo quando um de vocês toma dano de campeão. CD: 70-40s.</p>
+                <span class="rune-use">Use em: Supports defensivos</span>
+              </div>
             </div>
-        </section>
-    </main>
+          </div>
 
-    <footer>
-        <p>Boa sorte no Rift, Invocador! 🎮</p>
-    </footer>
+          <div class="rune-category">
+            <h4>Runas Menores</h4>
+            <div class="rune-grid-minor">
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Primeira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Demolir</strong>
+                    <p>Acumula dano para destruir estruturas mais rapidamente</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Fonte da Vida</strong>
+                    <p>Imobilizar inimigos cura você e o aliado próximo com menos vida</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Golpe de Escudo</strong>
+                    <p>Ganha armadura e resistência mágica enquanto protegido por escudo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Segunda Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Condicionamento</strong>
+                    <p>Após 12 minutos, ganha +8 de armadura e RM, e 3% a mais de resistências</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Ventos Alísios</strong>
+                    <p>Após tomar dano, ganha regeneração de vida por 10 segundos</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Armadura Óssea</strong>
+                    <p>Após tomar dano, próximos 3 ataques causam menos dano</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Terceira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Crescimento Excessivo</strong>
+                    <p>Permanentemente ganha vida por unidades mortas próximas</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Revitalizar</strong>
+                    <p>Curas e escudos são 5% mais fortes, +10% em alvos com pouca vida</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Inabalável</strong>
+                    <p>Ganha armadura e RM bônus quando sofre slow ou imobilização</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="rune-tree inspiracao">
+          <h3>💡 Inspiração (Inspiration)</h3>
+          <div class="rune-category">
+            <h4>Runas Chave (Escolha 1)</h4>
+            <div class="rune-grid">
+              <div class="rune-item">
+                <strong>Intensificador Glacial</strong>
+                <p>Imobilizar campeão inimigo causa 3 raios glaciais que criam zonas que diminuem a velocidade dos
+                  inimigos.</p>
+                <span class="rune-use">Use em: Supports de controle</span>
+              </div>
+              <div class="rune-item">
+                <strong>Livro de Feitiços Emancipado</strong>
+                <p>Fora de combate, pode trocar um summoner por outro de uso único. Volta ao original após uso.</p>
+                <span class="rune-use">Use em: Builds experimentais e flexíveis</span>
+              </div>
+              <div class="rune-item">
+                <strong>Primeiro Ataque</strong>
+                <p>Causar dano primeiro faz todo seu dano subsequente causar dano bônus e garante gold depois.</p>
+                <span class="rune-use">Use em: Campeões de poke que podem iniciar trades</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rune-category">
+            <h4>Runas Menores</h4>
+            <div class="rune-grid-minor">
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Primeira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Calçado Mágico</strong>
+                    <p>Recebe boots grátis aos 12 minutos, chegam 45s mais cedo por takedown</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Tripla Tônica</strong>
+                    <p>Ganha elixires especiais grátis nos níveis 3, 6 e 9</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Mercado do Futuro</strong>
+                    <p>Pode comprar itens no débito com juros mínimos</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Segunda Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Perspicácia Cósmica</strong>
+                    <p>Ganha 15 de pressa para summoners e 10 para itens ativos</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Velocidade de Aproximação</strong>
+                    <p>Ganha MS ao se aproximar de inimigos com movimento prejudicado</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Entrega de Biscoitos</strong>
+                    <p>Biscoitos grátis a cada 2 minutos que concedem mana permanente</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rune-row">
+                <div class="rune-minor-group">
+                  <h5>Terceira Fileira</h5>
+                  <div class="rune-minor-item">
+                    <strong>Tônico do Tempo Distorcido</strong>
+                    <p>Consumir poções ganha MS e cura mais rapidamente</p>
+                  </div>
+                  <div class="rune-minor-item">
+                    <strong>Pulverizador de Tropas</strong>
+                    <p>Destrói um minion instantaneamente para receber gold extra</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rune-tips">
+        <div class="card">
+          <h3>💡 Dicas Importantes</h3>
+          <ul>
+            <li><strong>Combine com seu estilo:</strong> ADCs preferem Precisão, Magos preferem Feitiçaria</li>
+            <li><strong>Adapte ao match-up:</strong> Contra poke, leve runas de sustain (Second Wind, Doran's Shield)
+            </li>
+            <li><strong>Considere o game plan:</strong> Early game? Dominação. Late game? Precisão/Feitiçaria</li>
+            <li><strong>Shards são importantes:</strong> Fragmentos afinam sua build - ajuste conforme necessário</li>
+            <li><strong>Use ferramentas externas:</strong> Sites como OP.GG ou U.GG podem guiar as escolhas baseadas no
+              meta atual</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="spells" class="content-section">
+      <h2>Feitiços de Invocador</h2>
+      <div class="spells-grid">
+        <div class="spell-card">
+          <h3>Flash</h3>
+          <p>Teleporta instantaneamente para uma curta distância. O feitiço mais importante do jogo!</p>
+          <span class="cooldown">Cooldown: 300s</span>
+        </div>
+        <div class="spell-card">
+          <h3>Ignite</h3>
+          <p>Causa dano verdadeiro ao longo do tempo e reduz cura.</p>
+          <span class="cooldown">Cooldown: 180s</span>
+        </div>
+        <div class="spell-card">
+          <h3>Heal</h3>
+          <p>Restaura vida sua e de um aliado próximo.</p>
+          <span class="cooldown">Cooldown: 240s</span>
+        </div>
+        <div class="spell-card">
+          <h3>Teleport</h3>
+          <p>Teleporta para um aliado, estrutura ou tropas.</p>
+          <span class="cooldown">Cooldown: 360s</span>
+        </div>
+        <div class="spell-card">
+          <h3>Barrier</h3>
+          <p>Cria um escudo temporário.</p>
+          <span class="cooldown">Cooldown: 180s</span>
+        </div>
+        <div class="spell-card">
+          <h3>Exhaust</h3>
+          <p>Reduz drasticamente o dano de um inimigo.</p>
+          <span class="cooldown">Cooldown: 210s</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="damage" class="content-section">
+      <h2>Tipos de Dano e Resistências</h2>
+      <div class="damage-types">
+        <div class="damage-card physical">
+          <h3>Dano Físico (AD)</h3>
+          <p>Baseado em Attack Damage (AD). Resistido por Armadura.</p>
+          <ul>
+            <li>Ataques básicos da maioria dos campeões</li>
+            <li>Habilidades de ADCs e alguns assassinos</li>
+            <li>Itens de armadura reduzem este dano</li>
+          </ul>
+        </div>
+        <div class="damage-card magical">
+          <h3>Dano Mágico (AP)</h3>
+          <p>Baseado em Ability Power (AP). Resistido por Resistência Mágica.</p>
+          <ul>
+            <li>Habilidades de magos</li>
+            <li>Alguns ataques especiais</li>
+            <li>Itens de RM reduzem este dano</li>
+          </ul>
+        </div>
+        <div class="damage-card true">
+          <h3>Dano Verdadeiro</h3>
+          <p>Não é resistido por nada. Sempre causa o valor total.</p>
+          <ul>
+            <li>Algumas habilidades especiais</li>
+            <li>Ignite, Smite</li>
+            <li>Não pode ser reduzido!</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="champions" class="content-section">
+      <h2>Classes de Campeões</h2>
+      <div class="champions-grid">
+        <div class="champion-class">
+          <h3>Marksman (ADC)</h3>
+          <p>Dano físico à distância. Principal fonte de dano da equipe.</p>
+          <div class="champion-example">Ex: Jinx, Ashe, Jhin</div>
+        </div>
+        <div class="champion-class">
+          <h3>Support</h3>
+          <p>Protege e auxilia a equipe. Controla visão de mapa.</p>
+          <div class="champion-example">Ex: Thresh, Lulu, Braum</div>
+        </div>
+        <div class="champion-class">
+          <h3>Mid Laner</h3>
+          <p>Mago ou assassino. Controla o centro do mapa.</p>
+          <div class="champion-example">Ex: Ahri, Yasuo, Azir</div>
+        </div>
+        <div class="champion-class">
+          <h3>Top Laner</h3>
+          <p>Tank ou lutador. Geralmente joga sozinho.</p>
+          <div class="champion-example">Ex: Garen, Darius, Fiora</div>
+        </div>
+        <div class="champion-class">
+          <h3>Jungler</h3>
+          <p>Percorre a jungle. Ganka as lanes.</p>
+          <div class="champion-example">Ex: Lee Sin, Graves, Amumu</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lanes" class="content-section">
+      <h2>As Lanes do Mapa</h2>
+      <div class="lanes-container">
+        <div class="map-representation">
+          <div class="lane top-lane">
+            <h3>Top Lane</h3>
+            <p>Lane superior. Geralmente 1v1. Foco em farm e escala.</p>
+          </div>
+          <div class="lane jungle">
+            <h3>Jungle</h3>
+            <p>Área entre as lanes. Monstros neutros e objetivos.</p>
+          </div>
+          <div class="lane mid-lane">
+            <h3>Mid Lane</h3>
+            <p>Lane central. Lane mais curta. Fácil de gankar e ajudar outras lanes.</p>
+          </div>
+          <div class="lane bot-lane">
+            <h3>Bot Lane</h3>
+            <p>Lane inferior. Duo lane (ADC + Support). Dragon próximo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="minions" class="content-section">
+      <h2>Minions e Gold</h2>
+      <div class="minions-gold">
+        <div class="card">
+          <h3>Tipos de Minions</h3>
+          <ul>
+            <li><strong>Melee Minions:</strong> 21-22 gold</li>
+            <li><strong>Caster Minions:</strong> 14-15 gold</li>
+            <li><strong>Cannon Minions:</strong> 60-90 gold (spawn a cada 3 waves)</li>
+            <li><strong>Super Minions:</strong> 25-40 gold (quando inibidor é destruído)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Importância do Gold</h3>
+          <ul>
+            <li>Compra de itens</li>
+            <li>Melhoria de habilidades</li>
+            <li>Controle de objetivos</li>
+            <li>Vantagem sobre inimigos</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Last Hit</h3>
+          <p>A técnica mais importante! Você só ganha gold se der o último hit no minion. Pratique no training mode!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Boa sorte no Rift, Invocador! 🎮</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
