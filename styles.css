@@ -262,13 +262,6 @@
     background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(91, 192, 222, 0.1));
 }
 
-/* Nova estrutura para runas menores */
-.rune-grid-minor {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
 .rune-row {
     background-color: rgba(205, 190, 145, 0.05);
     padding: 1rem;
@@ -590,12 +583,22 @@ ul li {
     margin-bottom: 1.5rem;
 }
 
+.rune-category .rune-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 .rune-item {
     background-color: rgba(70, 55, 20, 0.3);
     padding: 1rem;
     border-radius: 8px;
     border-left: 3px solid #C8A964;
     transition: all 0.3s ease;
+    min-height: 200px; /* Garante altura mínima consistente */
+    display: flex;
+    flex-direction: column;
 }
 
 .rune-item:hover {
@@ -685,6 +688,21 @@ ul li {
     
     .rune-row {
         padding: 0.8rem;
+    }
+}
+
+/* Responsividade para diferentes tamanhos de tela */
+@media (max-width: 1200px) {
+    .rune-category .rune-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .rune-category .rune-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
