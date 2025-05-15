@@ -17,6 +17,159 @@
     transition: transform 0.3s ease;
 }
 
+/* Adicionar/substituir no CSS */
+
+/* Estrutura das runas colapsáveis */
+.runes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Header das runas (sempre visível) */
+.rune-header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(30, 45, 80, 0.8);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.rune-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícone da runa no header */
+.rune-header .rune-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Título no header */
+.rune-header h3 {
+    flex: 1;
+    margin: 0;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Ícone de expandir */
+.expand-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    color: #C8A964;
+}
+
+/* Conteúdo das runas (colapsado por padrão) */
+.rune-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Estado expandido */
+.rune-tree.expanded .rune-content {
+    max-height: 2000px; /* Valor alto para acomodar todo o conteúdo */
+    padding: 1.5rem;
+    background-color: rgba(30, 45, 80, 0.6);
+    border-radius: 0 0 15px 15px;
+    margin-top: -15px;
+}
+
+.rune-tree.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+.rune-tree.expanded .rune-header {
+    border-radius: 15px 15px 0 0;
+}
+
+/* Cores específicas para cada árvore */
+.rune-tree.precisao .rune-header {
+    border-color: #f1c40f;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(241, 196, 15, 0.1));
+}
+
+.rune-tree.dominacao .rune-header {
+    border-color: #e74c3c;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(231, 76, 60, 0.1));
+}
+
+.rune-tree.feiticaria .rune-header {
+    border-color: #3498db;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(52, 152, 219, 0.1));
+}
+
+.rune-tree.determinacao .rune-header {
+    border-color: #2ecc71;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(46, 204, 113, 0.1));
+}
+
+.rune-tree.inspiracao .rune-header {
+    border-color: #5bc0de;
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.9), rgba(91, 192, 222, 0.1));
+}
+
+/* Conteúdo expandido com cores específicas */
+.rune-tree.precisao.expanded .rune-content {
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.6), rgba(241, 196, 15, 0.05));
+    border: 2px solid #f1c40f;
+    border-top: none;
+}
+
+.rune-tree.dominacao.expanded .rune-content {
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.6), rgba(231, 76, 60, 0.05));
+    border: 2px solid #e74c3c;
+    border-top: none;
+}
+
+.rune-tree.feiticaria.expanded .rune-content {
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.6), rgba(52, 152, 219, 0.05));
+    border: 2px solid #3498db;
+    border-top: none;
+}
+
+.rune-tree.determinacao.expanded .rune-content {
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.6), rgba(46, 204, 113, 0.05));
+    border: 2px solid #2ecc71;
+    border-top: none;
+}
+
+.rune-tree.inspiracao.expanded .rune-content {
+    background: linear-gradient(145deg, rgba(30, 45, 80, 0.6), rgba(91, 192, 222, 0.05));
+    border: 2px solid #5bc0de;
+    border-top: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .rune-header {
+        padding: 1rem;
+    }
+    
+    .rune-header .rune-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .rune-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .expand-icon {
+        font-size: 1.2rem;
+    }
+}
+
 .rune-icon:hover {
     transform: scale(1.1);
 }

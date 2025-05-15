@@ -51,7 +51,7 @@
       <h2>Sistema de Runas</h2>
       <p style="text-align: center; margin-bottom: 2rem; color: #a09b8c;">
         Runas oferecem efeitos passivos adaptados às forças e papel do seu campeão. Você escolhe 1 árvore primária e 1
-        secundária, além de fragmentos estatísticos.
+        secundária, além de fragmentos estatísticos. Clique nas árvores de runas para ver detalhes.
       </p>
 
       <div class="rune-system-overview">
@@ -66,172 +66,97 @@
       </div>
 
       <div class="runes-container">
-        <div class="rune-tree precisao">
-          <h3><img src="assets/precision.png" alt="Precisão" class="rune-icon"> Precisão (Precision)</h3>
-          <div class="rune-category">
-            <h4>Runas Chave (Escolha 1)</h4>
-            <div class="rune-grid">
-              <div class="rune-item">
-                <strong>Pressione o Ataque</strong>
-                <p>Atingir um campeão inimigo com 3 ataques básicos consecutivos causa dano adaptativo bônus e amplifica
-                  o dano que você causa até sair de combate.</p>
-                <span class="rune-use">Use em: ADCs e lutadores que focam em duelos 1v1</span>
-              </div>
-              <div class="rune-item">
-                <strong>Ritmo Fatal</strong>
-                <p>Atacar um campeão inimigo ganha uma stack de Tempo Letal por 6 segundos, até 6 stacks. Cada stack
-                  garante 5% de AS. Com stacks máximas, ataques também disparam uma nota que causa dano.</p>
-                <span class="rune-use">Use em: Campeões baseados em velocidade de ataque</span>
-              </div>
-              <div class="rune-item">
-                <strong>Agilidade nos Pés</strong>
-                <p>Atacar e se mover gera stacks de energia. Com 100 stacks, seu próximo ataque cura você e garante
-                  velocidade de movimento aumentada.</p>
-                <span class="rune-use">Use em: ADCs sustentados que precisam de mobilidade</span>
-              </div>
-              <div class="rune-item">
-                <strong>Conquistador</strong>
-                <p>Ganha stacks de força adaptativa ao atacar campeões inimigos. Após alcançar 12 stacks, cura uma parte
-                  do dano causado a campeões.</p>
-                <span class="rune-use">Use em: Lutadores que ficam muito tempo em combate</span>
-              </div>
-            </div>
+        <div class="rune-tree precisao collapsed">
+          <div class="rune-header" data-rune="precisao">
+            <img src="assets/precision.png" alt="Precisão" class="rune-icon">
+            <h3>Precisão (Precision)</h3>
+            <span class="expand-icon">▼</span>
           </div>
-
-          <div class="rune-category">
-            <h4>Runas Menores</h4>
-            <div class="rune-grid-minor">
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Primeira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Absorsão Vital</strong>
-                    <p>Takedowns curam você</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Triunfo</strong>
-                    <p>Takedowns restauram vida e concedem gold extra</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Presença de Espírito</strong>
-                    <p>Takedowns ou ao causar dano a um inimigo restauram mana/energia </p>
-                  </div>
+          <div class="rune-content">
+            <div class="rune-category">
+              <h4>Runas Chave (Escolha 1)</h4>
+              <div class="rune-grid">
+                <div class="rune-item">
+                  <strong>Pressione o Ataque</strong>
+                  <p>Atingir um campeão inimigo com 3 ataques básicos consecutivos causa dano adaptativo bônus e
+                    amplifica
+                    o dano que você causa até sair de combate.</p>
+                  <span class="rune-use">Use em: ADCs e lutadores que focam em duelos 1v1</span>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Segunda Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Lenda: Espontaneidade</strong>
-                    <p>Ganha velocidade de ataque permanente por takedowns</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Lenda: Aceleração</strong>
-                    <p>Ganha Aceleração de habilidade permanente para habilidades básicas por takedowns</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Lenda: Linhagem</strong>
-                    <p>Ganha roubo de vida por takedowns</p>
-                  </div>
+                <div class="rune-item">
+                  <strong>Ritmo Fatal</strong>
+                  <p>Atacar um campeão inimigo ganha uma stack de Tempo Letal por 6 segundos, até 6 stacks. Cada stack
+                    garante 5% de AS. Com stacks máximas, ataques também disparam uma nota que causa dano.</p>
+                  <span class="rune-use">Use em: Campeões baseados em velocidade de ataque</span>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Terceira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Golpe de Misericórdia</strong>
-                    <p>Causa mais dano a campeões com pouca vida</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Dilacerar</strong>
-                    <p>Causa mais dano a campeões com mais vida máxima que você</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Até a morte</strong>
-                    <p>Causa mais dano quando está com pouca vida</p>
-                  </div>
+                <div class="rune-item">
+                  <strong>Agilidade nos Pés</strong>
+                  <p>Atacar e se mover gera stacks de energia. Com 100 stacks, seu próximo ataque cura você e garante
+                    velocidade de movimento aumentada.</p>
+                  <span class="rune-use">Use em: ADCs sustentados que precisam de mobilidade</span>
+                </div>
+                <div class="rune-item">
+                  <strong>Conquistador</strong>
+                  <p>Ganha stacks de força adaptativa ao atacar campeões inimigos. Após alcançar 12 stacks, cura uma
+                    parte
+                    do dano causado a campeões.</p>
+                  <span class="rune-use">Use em: Lutadores que ficam muito tempo em combate</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="rune-tree dominacao">
-          <h3><img src="assets/domination.png" alt="Dominação" class="rune-icon"> Dominação (Domination)</h3>
-          <div class="rune-category">
-            <h4>Runas Chave (Escolha 1)</h4>
-            <div class="rune-grid">
-              <div class="rune-item">
-                <strong>Eletrocutar</strong>
-                <p>Causar dano a um inimigo com 3 ataques ou habilidades diferentes em 3s causa dano adaptativo adicional. Cooldown de 20s</p>
-                </p>
-                <span class="rune-use">Use em: Assassinos e magos de burst</span>
-              </div>
-              <div class="rune-item">
-                <strong>Colheita Sombria</strong>
-                <p>Causar dano a campeões abaixo de 50% da vida causa dano adaptativo adicional e colhe a alma de sua vítima. Cooldown de 35s, resetando para 1s em takedowns.</p>
-                <span class="rune-use">Use em: Campeões de late game e poke</span>
-              </div>
-              <div class="rune-item">
-                <strong>Chuva de Laminas</strong>
-                <p>Ganha velocidade de ataque massiva para os próximos 3 ataques contra campeões. Cooldown de 10s </p>
-                <span class="rune-use">Use em: Assassinos dependentes de ataques básicos</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="rune-category">
-            <h4>Runas Menores</h4>
-            <div class="rune-grid-minor">
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Primeira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Golpe Desleal</strong>
-                    <p>Causa dano verdadeiro adicioal a inimigos com movimento prejudicado</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Gosto de Sangue</strong>
-                    <p>Causar dano a um campeão cura você</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Impacto Repentino</strong>
-                    <p>Dano verdadeiro extra após dash, blink ou saída de invisibilidade</p>
+            <div class="rune-category">
+              <h4>Runas Menores</h4>
+              <div class="rune-grid-minor">
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Primeira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Absorsão Vital</strong>
+                      <p>Takedowns curam você</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Triunfo</strong>
+                      <p>Takedowns restauram vida e concedem gold extra</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Presença de Espírito</strong>
+                      <p>Takedowns ou ao causar dano a um inimigo restauram mana/energia </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Segunda Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Sentinela Profunda</strong>
-                    <p>Torna as wards colocadas no território inimigo mais resistentes (ganhando +1 de vida)</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Sexto Sentido</strong>
-                    <p>Permite rastrear wards inimigas próximas que não estejam visíveis.</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Lembrança Aterrorizante</strong>
-                    <p>Garante Aceleração de Habilidade para Trinkets após abates de campeões, acumulando infinitamente.
-                    </p>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Segunda Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Lenda: Espontaneidade</strong>
+                      <p>Ganha velocidade de ataque permanente por takedowns</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Lenda: Aceleração</strong>
+                      <p>Ganha Aceleração de habilidade permanente para habilidades básicas por takedowns</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Lenda: Linhagem</strong>
+                      <p>Ganha roubo de vida por takedowns</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Terceira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Caçador de Tesouros</strong>
-                    <p>Takedowns únicos garantem gold extra da primeira vez que são coletadas</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Caçador Incansável</strong>
-                    <p>Takedowns únicos garantem Velocidade de movimento permanente fora de combate</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Caçador Supremo</strong>
-                    <p>Takedowns únicos reduzem o CD da ultimate</p>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Terceira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Golpe de Misericórdia</strong>
+                      <p>Causa mais dano a campeões com pouca vida</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Dilacerar</strong>
+                      <p>Causa mais dano a campeões com mais vida máxima que você</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Até a morte</strong>
+                      <p>Causa mais dano quando está com pouca vida</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -239,163 +164,92 @@
           </div>
         </div>
 
-        <div class="rune-tree feiticaria">
-          <h3><img src="assets/sorcery.png" alt="Feitiçaria" class="rune-icon"> Feitiçaria (Sorcery)</h3>
-          <div class="rune-category">
-            <h4>Runas Chave (Escolha 1)</h4>
-            <div class="rune-grid">
-              <div class="rune-item">
-                <strong>Cometa Arcano</strong>
-                <p>Causar dano com habilidades invoca um cometa no alvo. Cooldown de 20-8s.</p>
-                <span class="rune-use">Use em: Magos de poke como Xerath</span>
-              </div>
-              <div class="rune-item">
-                <strong>Invocar Aery</strong>
-                <p>Seus ataques e habilidades enviam o Aery até um alvo, causanso dano a
-                  inimigos ou protegendo aliados.</p>
-                <span class="rune-use">Use em: Supports encantadores como Karma e Lulu</span>
-              </div>
-              <div class="rune-item">
-                <strong>Ímpeto Gradual</strong>
-                <p>Depois de causar dano com 3 habilidades separadas ou ataques, ganha Velocidade de movimento massiva e resistência a slows.
-                  Cooldown de 30-10s.</p>
-                <span class="rune-use">Use em: Campeões que se baneficiam de mobilidade como Gragas</span>
-              </div>
-            </div>
+        <div class="rune-tree dominacao collapsed">
+          <div class="rune-header" data-rune="dominacao">
+            <img src="assets/domination.png" alt="Dominação" class="rune-icon">
+            <h3>Dominação (Domination)</h3>
+            <span class="expand-icon">▼</span>
           </div>
-
-          <div class="rune-category">
-            <h4>Runas Menores</h4>
-            <div class="rune-grid-minor">
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Primeira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Arcanista do Axioma</strong>
-                    <p>Aumenta dano/cura/escudo da ultimate e reduz seu CD atual com takedowns</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Faixa de Fluxo de Mana</strong>
-                    <p>Acertar um campeão com uma habilidade ganha mana máxima permanente</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Manto de Nimbus</strong>
-                    <p>Usar summoners gera velocidade de movimento e efeito fantasma</p>
-                  </div>
+          <div class="rune-content">
+            <div class="rune-category">
+              <h4>Runas Chave (Escolha 1)</h4>
+              <div class="rune-grid">
+                <div class="rune-item">
+                  <strong>Eletrocutar</strong>
+                  <p>Causar dano a um inimigo com 3 ataques ou habilidades diferentes em 3s causa dano adaptativo
+                    adicional. Cooldown de 20s</p>
+                  </p>
+                  <span class="rune-use">Use em: Assassinos e magos de burst</span>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Segunda Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Transcendência</strong>
-                    <p>Ganha aceleração de habilidade nos níveis 5 e 8, mas no nível 11 ao abater campeões reduz em 20% o CD das habilidades básicas</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Celeridade</strong>
-                    <p>Ganha velocidade de movimento baseado em bônus de velocidade de movimento</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Foco Absoluto</strong>
-                    <p>Ganha Dano Adaptativo quando acima de 70% da vida</p>
-                  </div>
+                <div class="rune-item">
+                  <strong>Colheita Sombria</strong>
+                  <p>Causar dano a campeões abaixo de 50% da vida causa dano adaptativo adicional e colhe a alma de sua
+                    vítima. Cooldown de 35s, resetando para 1s em takedowns.</p>
+                  <span class="rune-use">Use em: Campeões de late game e poke</span>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Terceira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Chamuscar</strong>
-                    <p>Primeira habilidade de dano que atingir o alvo, queima o alvo</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Caminhar Sobre Águas</strong>
-                    <p>Ganha velocidade de movimento e Dano Adaptativo no rio</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Tempestade Crescente</strong>
-                    <p>Ganha quantidades crescentes de Dano Adaptativo ao longo do jogo</p>
-                  </div>
+                <div class="rune-item">
+                  <strong>Chuva de Laminas</strong>
+                  <p>Ganha velocidade de ataque massiva para os próximos 3 ataques contra campeões. Cooldown de 10s </p>
+                  <span class="rune-use">Use em: Assassinos dependentes de ataques básicos</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="rune-tree determinacao">
-          <h3><img src="assets/resolve.png" alt="Determinação" class="rune-icon"> Determinação (Resolve)</h3>
-          <div class="rune-category">
-            <h4>Runas Chave (Escolha 1)</h4>
-            <div class="rune-grid">
-              <div class="rune-item">
-                <strong>Aperto dos Mortos-vivos</strong>
-                <p>A cada 4s, seu próximo ataque contra um Campeão causa dano Mágico adicioal, cura você e aumenta permanentemente sua vida.</p>
-                <span class="rune-use">Use em: Tanks e bruisers como Sion e Ornn</span>
-              </div>
-              <div class="rune-item">
-                <strong>Pós-Choque</strong>
-                <p>Após imobilizar um Campeão inimigo, ganha defesas e depois causa um ataque de Dano Mágico explosivo. Cooldown de 20s.</p>
-                <span class="rune-use">Use em: Supports tanques como Leona e Thresh</span>
-              </div>
-              <div class="rune-item">
-                <strong>Guardião</strong>
-                <p>Você e aliados próximos ganham escudo quando um de vocês sofre dano de campeão. Cooldown de 90-40s.</p>
-                <span class="rune-use">Use em: Supports defensivos</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="rune-category">
-            <h4>Runas Menores</h4>
-            <div class="rune-grid-minor">
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Primeira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Demolir</strong>
-                    <p>Acumula dano para destruir estruturas mais rapidamente</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Fonte da Vida</strong>
-                    <p>Imobilizar inimigos cura você e o aliado próximo com menos vida</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Golpe de Escudo</strong>
-                    <p>Sempre que receber um escudo, seu próximo ataque básico contra um Campeão causará Dano Adaptativo</p>
+            <div class="rune-category">
+              <h4>Runas Menores</h4>
+              <div class="rune-grid-minor">
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Primeira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Golpe Desleal</strong>
+                      <p>Causa dano verdadeiro adicioal a inimigos com movimento prejudicado</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Gosto de Sangue</strong>
+                      <p>Causar dano a um campeão cura você</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Impacto Repentino</strong>
+                      <p>Dano verdadeiro extra após dash, blink ou saída de invisibilidade</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Segunda Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Condicionamento</strong>
-                    <p>Após 12 minutos, ganha +8 de armadura e resistência mágica, e 3% a mais de resistências</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Ventos Revigorantes</strong>
-                    <p>Após tomar dano, ganha regeneração de vida por 10 segundos</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Osso Revestido</strong>
-                    <p>Após tomar dano, próximos 3 ataques ou habilidades causam menos dano</p>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Segunda Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Sentinela Profunda</strong>
+                      <p>Torna as wards colocadas no território inimigo mais resistentes (ganhando +1 de vida)</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Sexto Sentido</strong>
+                      <p>Permite rastrear wards inimigas próximas que não estejam visíveis.</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Lembrança Aterrorizante</strong>
+                      <p>Garante Aceleração de Habilidade para Trinkets após abates de campeões, acumulando
+                        infinitamente.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Terceira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Crescimento Excessivo</strong>
-                    <p>Permanentemente ganha vida por unidades ou monstros abatidos perto de você</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Revitalizar</strong>
-                    <p>Curas e escudos são 5% mais fortes, +10% cura e escudo em alvos com pouca vida</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Inabalável</strong>
-                    <p>Ganha armadura e resistência mágica bônus quando sofre slow ou imobilização</p>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Terceira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Caçador de Tesouros</strong>
+                      <p>Takedowns únicos garantem gold extra da primeira vez que são coletadas</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Caçador Incansável</strong>
+                      <p>Takedowns únicos garantem Velocidade de movimento permanente fora de combate</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Caçador Supremo</strong>
+                      <p>Takedowns únicos reduzem o CD da ultimate</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -403,102 +257,292 @@
           </div>
         </div>
 
-        <div class="rune-tree inspiracao">
-          <h3><img src="assets/inspiration.png" alt="Inspiração" class="rune-icon"> Inspiração (Inspiration)</h3>
-          <div class="rune-category">
-            <h4>Runas Chave (Escolha 1)</h4>
-            <div class="rune-grid">
-              <div class="rune-item">
-                <strong>Aprimoramento Glacial</strong>
-                <p>Imobilizar campeão inimigo causa 3 raios glaciais que criam zonas que diminuem a velocidade dos inimigos e o dano causado a aliados.</p>
-                <span class="rune-use">Use em: Supports de controle</span>
-              </div>
-              <div class="rune-item">
-                <strong>Livro de Feitiços Deslacrado</strong>
-                <p>Fora de combate, pode trocar um Feitiço de Invocador por outro.</p>
-                <span class="rune-use">Use em: Builds experimentais e flexíveis</span>
-              </div>
-              <div class="rune-item">
-                <strong>Primeiro Ataque</strong>
-                <p>Ao iniciar um combate contra um Campeão, você causa 7% de dano adicional por 3s e recebe ouro com base no dano causado.</p>
-                <span class="rune-use">Use em: Campeões de poke que podem iniciar trades</span>
+        <div class="rune-tree feiticaria collapsed">
+          <div class="rune-header" data-rune="feiticaria">
+            <img src="assets/sorcery.png" alt="Feitiçaria" class="rune-icon">
+            <h3>Feitiçaria (Sorcery)</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="rune-content">
+            <div class="rune-category">
+              <h4>Runas Chave (Escolha 1)</h4>
+              <div class="rune-grid">
+                <div class="rune-item">
+                  <strong>Cometa Arcano</strong>
+                  <p>Causar dano com habilidades invoca um cometa no alvo. Cooldown de 20-8s.</p>
+                  <span class="rune-use">Use em: Magos de poke como Xerath</span>
+                </div>
+                <div class="rune-item">
+                  <strong>Invocar Aery</strong>
+                  <p>Seus ataques e habilidades enviam o Aery até um alvo, causanso dano a
+                    inimigos ou protegendo aliados.</p>
+                  <span class="rune-use">Use em: Supports encantadores como Karma e Lulu</span>
+                </div>
+                <div class="rune-item">
+                  <strong>Ímpeto Gradual</strong>
+                  <p>Depois de causar dano com 3 habilidades separadas ou ataques, ganha Velocidade de movimento massiva
+                    e resistência a slows.
+                    Cooldown de 30-10s.</p>
+                  <span class="rune-use">Use em: Campeões que se baneficiam de mobilidade como Gragas</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="rune-category">
-            <h4>Runas Menores</h4>
-            <div class="rune-grid-minor">
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Primeira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Flashtração Hextec</strong>
-                    <p>Enquanto o Flash estiver em Tempo de Recarga, ele é substituido pelo Flash Hextec</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Calçados Mágicos</strong>
-                    <p>Recebe botas grátis aos 12 minutos, chegam 45s mais cedo por takedown</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Reembolso</strong>
-                    <p>Recebe ouro de volta a comprar itens Lendários</p>
-                  </div>
-                </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Segunda Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Tônico Triplo</strong>
-                    <p>Ganha elixires especiais grátis nos níveis 3, 6 e 9</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Tônico de Distorção no Tempo</strong>
-                    <p>Consumir poções cura mais rapidamente</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Entrega de Biscoitos</strong>
-                    <p>Biscoitos grátis a cada 2 minutos que concedem cura e vida permanente</p>
+            <div class="rune-category">
+              <h4>Runas Menores</h4>
+              <div class="rune-grid-minor">
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Primeira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Arcanista do Axioma</strong>
+                      <p>Aumenta dano/cura/escudo da ultimate e reduz seu CD atual com takedowns</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Faixa de Fluxo de Mana</strong>
+                      <p>Acertar um campeão com uma habilidade ganha mana máxima permanente</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Manto de Nimbus</strong>
+                      <p>Usar summoners gera velocidade de movimento e efeito fantasma</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="rune-row">
-                <div class="rune-minor-group">
-                  <h5>Terceira Fileira</h5>
-                  <div class="rune-minor-item">
-                    <strong>Perspicácia Cósmica</strong>
-                    <p>Ganha 18 de aceleração para Feitiço do Invocador e 10 para itens ativos</p>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Segunda Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Transcendência</strong>
+                      <p>Ganha aceleração de habilidade nos níveis 5 e 8, mas no nível 11 ao abater campeões reduz em
+                        20% o CD das habilidades básicas</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Celeridade</strong>
+                      <p>Ganha velocidade de movimento baseado em bônus de velocidade de movimento</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Foco Absoluto</strong>
+                      <p>Ganha Dano Adaptativo quando acima de 70% da vida</p>
+                    </div>
                   </div>
-                  <div class="rune-minor-item">
-                    <strong>Velocidade de Aproximação</strong>
-                    <p>Ganha MS ao se aproximar de inimigos com movimento prejudicado</p>
-                  </div>
-                  <div class="rune-minor-item">
-                    <strong>Quebra-Galho</strong>
-                    <p>A cada  5 atributos diferente recebido de itens, recebe Força Adaptativa adicional</p>
+                </div>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Terceira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Chamuscar</strong>
+                      <p>Primeira habilidade de dano que atingir o alvo, queima o alvo</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Caminhar Sobre Águas</strong>
+                      <p>Ganha velocidade de movimento e Dano Adaptativo no rio</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Tempestade Crescente</strong>
+                      <p>Ganha quantidades crescentes de Dano Adaptativo ao longo do jogo</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="rune-tips">
-        <div class="card">
-          <h3>💡 Dicas Importantes</h3>
-          <ul>
-            <li><strong>Combine com seu estilo:</strong> ADCs preferem Precisão, Magos preferem Feitiçaria</li>
-            <li><strong>Adapte ao match-up:</strong> Contra poke, leve runas de sustain (Second Wind, Doran's Shield)
-            </li>
-            <li><strong>Considere o game plan:</strong> Early game? Dominação. Late game? Precisão/Feitiçaria</li>
-            <li><strong>Shards são importantes:</strong> Fragmentos afinam sua build - ajuste conforme necessário</li>
-            <li><strong>Use ferramentas externas:</strong> Sites como OP.GG ou U.GG podem guiar as escolhas baseadas no
-              meta atual</li>
-          </ul>
+        <div class="rune-tree determinacao collapsed">
+          <div class="rune-header" data-rune="determinacao">
+            <img src="assets/resolve.png" alt="Determinação" class="rune-icon">
+            <h3>Determinação (Resolve)</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="rune-content">
+            <div class="rune-category">
+              <h4>Runas Chave (Escolha 1)</h4>
+              <div class="rune-grid">
+                <div class="rune-item">
+                  <strong>Aperto dos Mortos-vivos</strong>
+                  <p>A cada 4s, seu próximo ataque contra um Campeão causa dano Mágico adicioal, cura você e aumenta
+                    permanentemente sua vida.</p>
+                  <span class="rune-use">Use em: Tanks e bruisers como Sion e Ornn</span>
+                </div>
+                <div class="rune-item">
+                  <strong>Pós-Choque</strong>
+                  <p>Após imobilizar um Campeão inimigo, ganha defesas e depois causa um ataque de Dano Mágico
+                    explosivo. Cooldown de 20s.</p>
+                  <span class="rune-use">Use em: Supports tanques como Leona e Thresh</span>
+                </div>
+                <div class="rune-item">
+                  <strong>Guardião</strong>
+                  <p>Você e aliados próximos ganham escudo quando um de vocês sofre dano de campeão. Cooldown de 90-40s.
+                  </p>
+                  <span class="rune-use">Use em: Supports defensivos</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rune-category">
+              <h4>Runas Menores</h4>
+              <div class="rune-grid-minor">
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Primeira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Demolir</strong>
+                      <p>Acumula dano para destruir estruturas mais rapidamente</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Fonte da Vida</strong>
+                      <p>Imobilizar inimigos cura você e o aliado próximo com menos vida</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Golpe de Escudo</strong>
+                      <p>Sempre que receber um escudo, seu próximo ataque básico contra um Campeão causará Dano
+                        Adaptativo</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Segunda Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Condicionamento</strong>
+                      <p>Após 12 minutos, ganha +8 de armadura e resistência mágica, e 3% a mais de resistências</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Ventos Revigorantes</strong>
+                      <p>Após tomar dano, ganha regeneração de vida por 10 segundos</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Osso Revestido</strong>
+                      <p>Após tomar dano, próximos 3 ataques ou habilidades causam menos dano</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Terceira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Crescimento Excessivo</strong>
+                      <p>Permanentemente ganha vida por unidades ou monstros abatidos perto de você</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Revitalizar</strong>
+                      <p>Curas e escudos são 5% mais fortes, +10% cura e escudo em alvos com pouca vida</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Inabalável</strong>
+                      <p>Ganha armadura e resistência mágica bônus quando sofre slow ou imobilização</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="rune-tree inspiracao collapsed">
+          <div class="rune-header" data-rune="inspiracao">
+            <img src="assets/inspiration.png" alt="Inspiração" class="rune-icon">
+            <h3>Inspiração (Inspiration)</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="rune-content">
+            <div class="rune-category">
+              <h4>Runas Chave (Escolha 1)</h4>
+              <div class="rune-grid">
+                <div class="rune-item">
+                  <strong>Aprimoramento Glacial</strong>
+                  <p>Imobilizar campeão inimigo causa 3 raios glaciais que criam zonas que diminuem a velocidade dos
+                    inimigos e o dano causado a aliados.</p>
+                  <span class="rune-use">Use em: Supports de controle</span>
+                </div>
+                <div class="rune-item">
+                  <strong>Livro de Feitiços Deslacrado</strong>
+                  <p>Fora de combate, pode trocar um Feitiço de Invocador por outro.</p>
+                  <span class="rune-use">Use em: Builds experimentais e flexíveis</span>
+                </div>
+                <div class="rune-item">
+                  <strong>Primeiro Ataque</strong>
+                  <p>Ao iniciar um combate contra um Campeão, você causa 7% de dano adicional por 3s e recebe ouro com
+                    base no dano causado.</p>
+                  <span class="rune-use">Use em: Campeões de poke que podem iniciar trades</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rune-category">
+              <h4>Runas Menores</h4>
+              <div class="rune-grid-minor">
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Primeira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Flashtração Hextec</strong>
+                      <p>Enquanto o Flash estiver em Tempo de Recarga, ele é substituido pelo Flash Hextec</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Calçados Mágicos</strong>
+                      <p>Recebe botas grátis aos 12 minutos, chegam 45s mais cedo por takedown</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Reembolso</strong>
+                      <p>Recebe ouro de volta a comprar itens Lendários</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Segunda Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Tônico Triplo</strong>
+                      <p>Ganha elixires especiais grátis nos níveis 3, 6 e 9</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Tônico de Distorção no Tempo</strong>
+                      <p>Consumir poções cura mais rapidamente</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Entrega de Biscoitos</strong>
+                      <p>Biscoitos grátis a cada 2 minutos que concedem cura e vida permanente</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="rune-row">
+                  <div class="rune-minor-group">
+                    <h5>Terceira Fileira</h5>
+                    <div class="rune-minor-item">
+                      <strong>Perspicácia Cósmica</strong>
+                      <p>Ganha 18 de aceleração para Feitiço do Invocador e 10 para itens ativos</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Velocidade de Aproximação</strong>
+                      <p>Ganha MS ao se aproximar de inimigos com movimento prejudicado</p>
+                    </div>
+                    <div class="rune-minor-item">
+                      <strong>Quebra-Galho</strong>
+                      <p>A cada 5 atributos diferente recebido de itens, recebe Força Adaptativa adicional</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rune-tips">
+          <div class="card">
+            <h3>💡 Dicas Importantes</h3>
+            <ul>
+              <li><strong>Combine com seu estilo:</strong> ADCs preferem Precisão, Magos preferem Feitiçaria</li>
+              <li><strong>Adapte ao match-up:</strong> Contra poke, leve runas de sustain (Second Wind, Doran's Shield)
+              </li>
+              <li><strong>Considere o game plan:</strong> Early game? Dominação. Late game? Precisão/Feitiçaria</li>
+              <li><strong>Shards são importantes:</strong> Fragmentos afinam sua build - ajuste conforme necessário</li>
+              <li><strong>Use ferramentas externas:</strong> Sites como OP.GG ou U.GG podem guiar as escolhas baseadas
+                no
+                meta atual</li>
+            </ul>
+          </div>
+        </div>
     </section>
 
 

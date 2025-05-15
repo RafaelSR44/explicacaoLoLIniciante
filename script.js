@@ -107,6 +107,45 @@ document.addEventListener('DOMContentLoaded', function () {
   updateProgress();
 
   // Enhanced rune interactions
+
+  // Função para runas colapsáveis
+  function initializeCollapsibleRunes() {
+    const runeHeaders = document.querySelectorAll('.rune-header');
+
+    runeHeaders.forEach(header => {
+      header.addEventListener('click', function () {
+        const runeTree = header.parentElement;
+        const isExpanded = runeTree.classList.contains('expanded');
+
+        // Colapsar todas as outras runas primeiro
+        document.querySelectorAll('.rune-tree').forEach(tree => {
+          if (tree !== runeTree) {
+            tree.classList.remove('expanded');
+          }
+        });
+
+        // Toggle da runa clicada
+        if (isExpanded) {
+          runeTree.classList.remove('expanded');
+        } else {
+          runeTree.classList.add('expanded');
+        }
+      });
+    });
+  }
+
+  // Adicionar animação de entrada para as runas
+  function animateRuneEntrance() {
+    const runeHeaders = document.querySelectorAll('.rune-header');
+
+    runeHeaders.forEach((header, index) => {
+      header.style.opacity = '0';
+      header.style.transform = 'translateY(20px)';
+      header.style.animation = `slideInUp 0.6s ease forwards`;
+      header.style.animationDelay = `${index * 0.1}s`;
+    });
+  }
+
   // Função para criar popup de runas
   function createRunePopup(runeName, runeDesc) {
     // Criar overlay
@@ -315,6 +354,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Add rune selector button
   createRuneSelector();
+  // Initialize collapsible runes
+  initializeCollapsibleRunes();
+  animateRuneEntrance();
+  initializeRunePopups();
+
 
   // Spell cooldown animation
   const spellCards = document.querySelectorAll('.spell-card');
@@ -705,30 +749,30 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(resultOverlay);
   }
 
-// Versão alternativa mais robusta
-// Adicionar depois da inicialização do DOM
+  // Versão alternativa mais robusta
+  // Adicionar depois da inicialização do DOM
 
-function initializeKonamiCode() {
+  function initializeKonamiCode() {
     let konamiCode = [];
     const requiredCode = [
-        'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-        'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight'
+      'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+      'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight'
     ];
-    
-    document.addEventListener('keydown', function(e) {
-        konamiCode.push(e.code);
-        konamiCode = konamiCode.slice(-8);
-        
-        if (JSON.stringify(konamiCode) === JSON.stringify(requiredCode)) {
-            showEasterEgg();
-        }
-    });
-}
 
-function showEasterEgg() {
+    document.addEventListener('keydown', function (e) {
+      konamiCode.push(e.code);
+      konamiCode = konamiCode.slice(-8);
+
+      if (JSON.stringify(konamiCode) === JSON.stringify(requiredCode)) {
+        showEasterEgg();
+      }
+    });
+  }
+
+  function showEasterEgg() {
     // Aplicar filtro
     document.body.style.filter = 'hue-rotate(180deg)';
-    
+
     // Criar overlay
     const overlay = document.createElement('div');
     overlay.style.cssText = `
@@ -743,7 +787,7 @@ function showEasterEgg() {
         justify-content: center;
         align-items: center;
     `;
-    
+
     // Criar popup
     const celebration = document.createElement('div');
     celebration.style.cssText = `
@@ -759,10 +803,10 @@ function showEasterEgg() {
         animation: bounce 0.5s ease infinite alternate;
     `;
     celebration.innerHTML = '🎉 EASTER EGG ENCONTRADO! 🎉<br><br>Você é um verdadeiro invocador!';
-    
+
     overlay.appendChild(celebration);
     document.body.appendChild(overlay);
-    
+
     // Adicionar CSS da animação
     const style = document.createElement('style');
     style.textContent = `
@@ -772,17 +816,17 @@ function showEasterEgg() {
         }
     `;
     document.head.appendChild(style);
-    
+
     // Limpar após 3 segundos
     setTimeout(() => {
-        document.body.style.filter = 'none';
-        document.body.removeChild(overlay);
-        document.head.removeChild(style);
+      document.body.style.filter = 'none';
+      document.body.removeChild(overlay);
+      document.head.removeChild(style);
     }, 3000);
-}
+  }
 
-// Chamar dentro do DOMContentLoaded
-initializeKonamiCode();
+  // Chamar dentro do DOMContentLoaded
+  initializeKonamiCode();
 
   // Music toggle
   const musicToggle = document.createElement('button');
