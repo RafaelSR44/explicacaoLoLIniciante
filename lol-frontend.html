@@ -176,7 +176,8 @@
               <div class="rune-grid">
                 <div class="rune-item">
                   <strong>Eletrocutar</strong>
-                  <p>Causar dano a um inimigo com 3 ataques ou habilidades diferentes em 3s causa dano adaptativo adicional. Cooldown de 20s</p>
+                  <p>Causar dano a um inimigo com 3 ataques ou habilidades diferentes em 3s causa dano adaptativo
+                    adicional. Cooldown de 20s</p>
                   <span class="rune-use">Use em: Assassinos e magos de burst</span>
                 </div>
                 <div class="rune-item">
@@ -545,38 +546,93 @@
 
 
 
+    <!-- Substituir a seção de feitiços no HTML -->
     <section id="spells" class="content-section">
       <h2>Feitiços de Invocador</h2>
+      <p style="text-align: center; margin-bottom: 2rem; color: #a09b8c;">
+        Clique nos feitiços para ouvir seus efeitos sonoros e ver mais detalhes!
+      </p>
+
       <div class="spells-grid">
-        <div class="spell-card">
+        <div class="spell-card" data-spell="flash" data-color="#f4d800">
           <h3>Flash</h3>
+          <div class="spell-icon-container">
+            <img src="assets/spells/flash.png" alt="Flash" class="spell-icon">
+          </div>
           <p>Teleporta instantaneamente para uma curta distância. O feitiço mais importante do jogo!</p>
           <span class="cooldown">Cooldown: 300s</span>
         </div>
-        <div class="spell-card">
+
+        <div class="spell-card" data-spell="ignite" data-color="#ff4444">
           <h3>Ignite</h3>
-          <p>Causa dano verdadeiro ao longo do tempo e reduz cura.</p>
+          <div class="spell-icon-container">
+            <img src="assets/spells/ignite.png" alt="Ignite" class="spell-icon">
+          </div>
+          <p>Causa dano verdadeiro ao longo do tempo e aplica Grievous Wounds (reduz cura).</p>
           <span class="cooldown">Cooldown: 180s</span>
         </div>
-        <div class="spell-card">
+
+        <div class="spell-card" data-spell="heal" data-color="#44ff44">
           <h3>Heal</h3>
-          <p>Restaura vida sua e de um aliado próximo.</p>
+          <div class="spell-icon-container">
+            <img src="assets/spells/heal.png" alt="Heal" class="spell-icon">
+          </div>
+          <p>Restaura vida sua e de um aliado próximo. Também garante velocidade de movimento.</p>
           <span class="cooldown">Cooldown: 240s</span>
         </div>
-        <div class="spell-card">
+
+        <div class="spell-card" data-spell="teleport" data-color="#4488ff">
           <h3>Teleport</h3>
-          <p>Teleporta para um aliado, estrutura ou tropas.</p>
-          <span class="cooldown">Cooldown: 360s</span>
+          <div class="spell-icon-container">
+            <img src="assets/spells/teleport.png" alt="Teleport" class="spell-icon">
+          </div>
+          <p>Teleporta para aliado, estrutura ou tropas. Vira Unleashed Teleport após 10 minutos.</p>
+          <span class="cooldown">Cooldown: 300s</span>
         </div>
-        <div class="spell-card">
+
+        <div class="spell-card" data-spell="barrier" data-color="#8844ff">
           <h3>Barrier</h3>
-          <p>Cria um escudo temporário.</p>
+          <div class="spell-icon-container">
+            <img src="assets/spells/barrier.png" alt="Barrier" class="spell-icon">
+          </div>
+          <p>Cria um escudo temporário que dura 2.5 segundos.</p>
           <span class="cooldown">Cooldown: 180s</span>
         </div>
-        <div class="spell-card">
+
+        <div class="spell-card" data-spell="exhaust" data-color="#aa44aa">
           <h3>Exhaust</h3>
-          <p>Reduz drasticamente o dano de um inimigo.</p>
-          <span class="cooldown">Cooldown: 210s</span>
+          <div class="spell-icon-container">
+            <img src="assets/spells/exhaust.png" alt="Exhaust" class="spell-icon">
+          </div>
+          <p>Reduz velocidade em 40% e dano causado pelo inimigo em 35%.</p>
+          <span class="cooldown">Cooldown: 240s</span>
+        </div>
+
+        <div class="spell-card" data-spell="cleanse" data-color="#44dddd">
+          <h3>Cleanse</h3>
+          <div class="spell-icon-container">
+            <img src="assets/spells/cleanse.png" alt="Cleanse" class="spell-icon">
+          </div>
+          <p>Remove todos os debuffs e concede 75% de tenacidade por 3 segundos.</p>
+          <span class="cooldown">Cooldown: 240s</span>
+        </div>
+
+        <div class="spell-card" data-spell="ghost" data-color="#dddddd">
+          <h3>Ghost</h3>
+          <div class="spell-icon-container">
+            <img src="assets/spells/ghost.png" alt="Ghost" class="spell-icon">
+          </div>
+          <p>Aumenta velocidade de movimento por 10 segundos. Ignora colisão de unidades.</p>
+          <span class="cooldown">Cooldown: 240s</span>
+        </div>
+
+        <div class="spell-card" data-spell="smite" data-color="#8b4513">
+          <h3>Smite</h3>
+          <div class="spell-icon-container">
+            <img src="assets/spells/smite.png" alt="Smite" class="spell-icon">
+          </div>
+          <p>Causa dano verdadeiro a monstros, minions ou pets. Essencial para junglers.</p>
+          <span class="cooldown">Cooldown: 90s</span>
         </div>
       </div>
     </section>
