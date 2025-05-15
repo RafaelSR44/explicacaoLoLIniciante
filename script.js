@@ -357,7 +357,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize collapsible runes
   initializeCollapsibleRunes();
   animateRuneEntrance();
-  initializeRunePopups();
 
 
   // Spell cooldown animation
