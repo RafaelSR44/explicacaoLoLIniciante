@@ -1,4 +1,4 @@
-/* SUBSTITUIR TODO O CSS POR ESTA VERSÃO LIMPA */
+/* =========================== ESTILOS GLOBAIS =========================== */
 
 * {
     margin: 0;
@@ -479,8 +479,6 @@ ul li {
     color: #C8A964;
 }
 
-/* =========================== RESTO DO CSS =========================== */
-
 /* Feitiços */
 /* Feitiços específicos - Nova versão aprimorada */
 .spells-grid {
@@ -667,10 +665,12 @@ ul li {
 }
 
 /* Campeões */
+/* Campeões - Sistema de Classes Atualizado */
 .champions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .champion-class {
@@ -679,13 +679,129 @@ ul li {
     border-radius: 10px;
     border: 2px solid #463714;
     text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.champion-class:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(200, 169, 100, 0.3);
+}
+
+.champion-class h3 {
+    color: #CDBE91;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.champion-class p {
+    color: #a09b8c;
+    margin-bottom: 1rem;
+    line-height: 1.4;
 }
 
 .champion-example {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-style: italic;
     color: #C8A964;
     font-size: 0.9rem;
+}
+
+.class-strengths, .class-weaknesses {
+    background-color: rgba(200, 169, 100, 0.1);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.class-strengths {
+    border-left: 3px solid #28a745;
+}
+
+.class-strengths strong {
+    color: #28a745;
+}
+
+.class-weaknesses {
+    border-left: 3px solid #dc3545;
+}
+
+.class-weaknesses strong {
+    color: #dc3545;
+}
+
+/* Cores específicas por classe */
+.champion-class[data-class="tank"] {
+    border-color: #4169E1;
+}
+
+.champion-class[data-class="tank"]:hover {
+    border-color: #6495ED;
+    box-shadow: 0 0 15px rgba(65, 105, 225, 0.4);
+}
+
+.champion-class[data-class="fighter"] {
+    border-color: #FF4500;
+}
+
+.champion-class[data-class="fighter"]:hover {
+    border-color: #FF6347;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
+}
+
+.champion-class[data-class="slayer"] {
+    border-color: #DC143C;
+}
+
+.champion-class[data-class="slayer"]:hover {
+    border-color: #FF1744;
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
+}
+
+.champion-class[data-class="marksman"] {
+    border-color: #FFD700;
+}
+
+.champion-class[data-class="marksman"]:hover {
+    border-color: #FFF700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.champion-class[data-class="mage"] {
+    border-color: #4169E1;
+}
+
+.champion-class[data-class="mage"]:hover {
+    border-color: #4682B4;
+    box-shadow: 0 0 15px rgba(65, 105, 225, 0.4);
+}
+
+.champion-class[data-class="controller"] {
+    border-color: #32CD32;
+}
+
+.champion-class[data-class="controller"]:hover {
+    border-color: #00FF00;
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.4);
+}
+
+/* Seção do diagrama de classes */
+.class-diagram-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.class-diagram-section .card {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.class-diagram-section ul li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
 }
 
 /* Lanes */

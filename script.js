@@ -568,17 +568,158 @@ document.head.appendChild(spellReadyStyle);
   });
 
   // Champion rotation
+
+  // Enhanced Champion Class Interactions
   const championClasses = document.querySelectorAll('.champion-class');
   championClasses.forEach(championClass => {
     championClass.addEventListener('click', function () {
+      const className = championClass.getAttribute('data-class');
+      const classInfo = getClassInfo(className);
+      
+      // Efeito de rotação
       championClass.style.transform = 'rotateY(360deg)';
       championClass.style.transition = 'transform 0.6s ease';
 
       setTimeout(() => {
         championClass.style.transform = 'rotateY(0deg)';
+        showClassPopup(classInfo);
       }, 600);
     });
   });
+
+  function getClassInfo(className) {
+    const classData = {
+      tank: {
+        name: 'Tanks',
+        description: 'Tanks são campeões corpo a corpo resistentes que sacrificam dano por controle de multidão poderoso.',
+        playstyle: 'Iniciação, proteção de aliados, absorção de dano',
+        subclasses: ['Vanguard', 'Warden'],
+        examples: 'Malphite, Ornn, Sejuani, Maokai, Braum',
+        tips: 'Construa itens de resistência, foque em proteção de equipe, inicie team fights'
+      },
+      fighter: {
+        name: 'Fighters',
+        description: 'Fighters são um grupo diverso de combatentes de curta distância que excel tanto em causar quanto em sobreviver a dano.',
+        playstyle: 'Duelos 1v1, dano sustentado, combates prolongados',
+        subclasses: ['Juggernaut', 'Diver'],
+        examples: 'Darius, Camille, Jax, Garen, Fiora',
+        tips: 'Balance entre dano e resistência, domine o side lane, force duelos'
+      },
+      slayer: {
+        name: 'Slayers',
+        description: 'Slayers são campeões altamente móveis especializados em dano em rajada contra alvos únicos.',
+        playstyle: 'Burst damage, mobilidade, eliminação de alvos prioritários',
+        subclasses: ['Assassin', 'Skirmisher'],
+        examples: 'Zed, Yasuo, Katarina, Fizz, Qiyana',
+        tips: 'Aguarde oportunidades, elimine ADC/Mid, use mobilidade para escapar'
+      },
+      marksman: {
+        name: 'Marksmen',
+        description: 'Marksmen são campeões à distância cujo poder gira quase exclusivamente em torno de seus ataques básicos.',
+        playstyle: 'DPS à distância, ataques básicos, dano sustentado',
+        subclasses: ['Artillery', 'Crit ADC'],
+        examples: 'Jinx, Ashe, Kai\'Sa, Caitlyn, Ezreal',
+        tips: 'Mantenha distância, faça farm no early game, posicione-se atrás da equipe'
+      },
+      mage: {
+        name: 'Mages',
+        description: 'Mages são campeões que possuem grande alcance, dano em área baseado em habilidades e controle de multidão.',
+        playstyle: 'Burst damage, controle, combos de habilidades',
+        subclasses: ['Burst', 'Battle', 'Artillery'],
+        examples: 'Azir, Ahri, Syndra, Orianna, Xerath',
+        tips: 'Gerencie mana e cooldowns, posicione-se bem, faça combos'
+      },
+      controller: {
+        name: 'Controllers',
+        description: 'Controllers auxiliam aliados com utilidade poderosa e mantêm inimigos afastados com controle de multidão.',
+        playstyle: 'Suporte, utilidade, proteção da equipe',
+        subclasses: ['Enchanter', 'Catcher'],
+        examples: 'Lulu, Thresh, Janna, Blitzcrank, Braum',
+        tips: 'Proteja aliados, controle objetivos, garanta visão de mapa'
+      }
+    };
+    
+    return classData[className] || null;
+  }
+
+  function showClassPopup(classInfo) {
+    if (!classInfo) return;
+    
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 27, 60, 0.9);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `;
+
+    const popup = document.createElement('div');
+    popup.style.cssText = `
+      background: #1e2d50;
+      color: #CDBE91;
+      padding: 2rem;
+      border-radius: 15px;
+      border: 2px solid #C8A964;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      position: relative;
+    `;
+
+    popup.innerHTML = `
+      <h3 style="color: #C8A964; margin-bottom: 1rem; text-align: center;">${classInfo.name}</h3>
+      <p style="margin-bottom: 1rem; line-height: 1.5;">${classInfo.description}</p>
+      
+      <div style="background: rgba(200, 169, 100, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+        <strong style="color: #C8A964;">Estilo de Jogo:</strong> ${classInfo.playstyle}
+      </div>
+      
+      <div style="margin-bottom: 1rem;">
+        <strong style="color: #C8A964;">Subclasses:</strong> ${classInfo.subclasses.join(', ')}
+      </div>
+      
+      <div style="margin-bottom: 1rem;">
+        <strong style="color: #C8A964;">Exemplos:</strong> ${classInfo.examples}
+      </div>
+      
+      <div style="background: rgba(70, 55, 20, 0.3); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+        <strong style="color: #C8A964;">💡 Dicas:</strong> ${classInfo.tips}
+      </div>
+      
+      <div style="text-align: center;">
+        <button class="close-class-popup" style="
+          background: #C8A964;
+          color: #0F1B3C;
+          border: none;
+          padding: 0.5rem 1.5rem;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: bold;
+        ">Fechar</button>
+      </div>
+    `;
+
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+
+    // Fechar popup
+    const closeBtn = popup.querySelector('.close-class-popup');
+    closeBtn.addEventListener('click', () => {
+      document.body.removeChild(overlay);
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        document.body.removeChild(overlay);
+      }
+    });
+  }
 
   // Gold counter animation
   const minionCards = document.querySelectorAll('#minions .card');

@@ -68,7 +68,7 @@
       <div class="runes-container">
         <div class="rune-tree precisao collapsed">
           <div class="rune-header" data-rune="precisao">
-            <img src="assets/precision.png" alt="Precisão" class="rune-icon">
+            <img src="assets/runes/precision.png" alt="Precisão" class="rune-icon">
             <h3>Precisão (Precision)</h3>
             <span class="expand-icon">▼</span>
           </div>
@@ -166,7 +166,7 @@
 
         <div class="rune-tree dominacao collapsed">
           <div class="rune-header" data-rune="dominacao">
-            <img src="assets/domination.png" alt="Dominação" class="rune-icon">
+            <img src="assets/runes/domination.png" alt="Dominação" class="rune-icon">
             <h3>Dominação (Domination)</h3>
             <span class="expand-icon">▼</span>
           </div>
@@ -258,7 +258,7 @@
 
         <div class="rune-tree feiticaria collapsed">
           <div class="rune-header" data-rune="feiticaria">
-            <img src="assets/sorcery.png" alt="Feitiçaria" class="rune-icon">
+            <img src="assets/runes/sorcery.png" alt="Feitiçaria" class="rune-icon">
             <h3>Feitiçaria (Sorcery)</h3>
             <span class="expand-icon">▼</span>
           </div>
@@ -349,7 +349,7 @@
 
         <div class="rune-tree determinacao collapsed">
           <div class="rune-header" data-rune="determinacao">
-            <img src="assets/resolve.png" alt="Determinação" class="rune-icon">
+            <img src="assets/runes/resolve.png" alt="Determinação" class="rune-icon">
             <h3>Determinação (Resolve)</h3>
             <span class="expand-icon">▼</span>
           </div>
@@ -440,7 +440,7 @@
 
         <div class="rune-tree inspiracao collapsed">
           <div class="rune-header" data-rune="inspiracao">
-            <img src="assets/inspiration.png" alt="Inspiração" class="rune-icon">
+            <img src="assets/runes/inspiration.png" alt="Inspiração" class="rune-icon">
             <h3>Inspiração (Inspiration)</h3>
             <span class="expand-icon">▼</span>
           </div>
@@ -672,31 +672,97 @@
 
     <section id="champions" class="content-section">
       <h2>Classes de Campeões</h2>
+      <p style="text-align: center; margin-bottom: 2rem; color: #a09b8c;">
+        Cada classe tem características únicas e contraclasses naturais. Clique nos cards para ver detalhes sobre forças
+        e fraquezas.
+      </p>
+
       <div class="champions-grid">
-        <div class="champion-class">
-          <h3>Marksman (ADC)</h3>
-          <p>Dano físico à distância. Principal fonte de dano da equipe.</p>
-          <div class="champion-example">Ex: Jinx, Ashe, Jhin</div>
+        <div class="champion-class" data-class="tank">
+          <h3>Tanks</h3>
+          <p>Resistência elevada, controle de multidão e iniciação. Sacrificam dano por durabilidade.</p>
+          <div class="champion-example">Ex: Malphite, Ornn, Sejuani</div>
+          <div class="class-strengths">
+            <strong>Forte contra:</strong> Slayers, Mages
+          </div>
+          <div class="class-weaknesses">
+            <strong>Fraco contra:</strong> Marksmen, Fighters
+          </div>
         </div>
-        <div class="champion-class">
-          <h3>Support</h3>
-          <p>Protege e auxilia a equipe. Controla visão de mapa.</p>
-          <div class="champion-example">Ex: Thresh, Lulu, Braum</div>
+
+        <div class="champion-class" data-class="fighter">
+          <h3>Fighters (Bruisers)</h3>
+          <p>Equilíbrio entre dano e resistência. Dominam combates prolongados de curta distância.</p>
+          <div class="champion-example">Ex: Darius, Camille, Jax</div>
+          <div class="class-strengths">
+            <strong>Forte contra:</strong> Tanks, Assassinos
+          </div>
+          <div class="class-weaknesses">
+            <strong>Fraco contra:</strong> Marksmen, Mages
+          </div>
         </div>
-        <div class="champion-class">
-          <h3>Mid Laner</h3>
-          <p>Mago ou assassino. Controla o centro do mapa.</p>
-          <div class="champion-example">Ex: Ahri, Yasuo, Azir</div>
+
+        <div class="champion-class" data-class="slayer">
+          <h3>Slayers (Assassinos)</h3>
+          <p>Mobilidade extrema e dano em rajada. Especialistas em eliminar alvos prioritários rapidamente.</p>
+          <div class="champion-example">Ex: Zed, Yasuo, Katarina</div>
+          <div class="class-strengths">
+            <strong>Forte contra:</strong> Marksmen, Mages
+          </div>
+          <div class="class-weaknesses">
+            <strong>Fraco contra:</strong> Tanks, Fighters
+          </div>
         </div>
-        <div class="champion-class">
-          <h3>Top Laner</h3>
-          <p>Tank ou lutador. Geralmente joga sozinho.</p>
-          <div class="champion-example">Ex: Garen, Darius, Fiora</div>
+
+        <div class="champion-class" data-class="marksman">
+          <h3>Marksmen (ADC)</h3>
+          <p>Dano contínuo à distância baseado em ataques básicos. Principal fonte de DPS da equipe.</p>
+          <div class="champion-example">Ex: Jinx, Ashe, Kai'Sa</div>
+          <div class="class-strengths">
+            <strong>Forte contra:</strong> Tanks, Fighters
+          </div>
+          <div class="class-weaknesses">
+            <strong>Fraco contra:</strong> Slayers, Mages
+          </div>
         </div>
-        <div class="champion-class">
-          <h3>Jungler</h3>
-          <p>Percorre a jungle. Ganka as lanes.</p>
-          <div class="champion-example">Ex: Lee Sin, Graves, Amumu</div>
+
+        <div class="champion-class" data-class="mage">
+          <h3>Mages</h3>
+          <p>Dano mágico em área e controle de multidão. Dominam através de habilidades poderosas.</p>
+          <div class="champion-example">Ex: Azir, Ahri, Syndra</div>
+          <div class="class-strengths">
+            <strong>Forte contra:</strong> Marksmen, Slayers
+          </div>
+          <div class="class-weaknesses">
+            <strong>Fraco contra:</strong> Tanks, Fighters
+          </div>
+        </div>
+
+        <div class="champion-class" data-class="controller">
+          <h3>Controllers (Supports)</h3>
+          <p>Utilidade e suporte. Amplificam o poder da equipe através de escudos, curas e controle.</p>
+          <div class="champion-example">Ex: Lulu, Thresh, Janna</div>
+          <div class="class-strengths">
+            <strong>Forte contra:</strong> Dependente da equipe
+          </div>
+          <div class="class-weaknesses">
+            <strong>Fraco quando:</strong> Sozinho no mapa
+          </div>
+        </div>
+      </div>
+
+      <div class="class-diagram-section">
+        <h3>Sistema de Contraclasses</h3>
+        <div class="card">
+          <p>📊 <strong>Cada classe tem vantagens contra algumas e desvantagens contra outras:</strong></p>
+          <ul>
+            <li><strong>Tanks</strong> resistem bem a burst, mas sofrem contra dano contínuo</li>
+            <li><strong>Fighters</strong> vencem em duelos 1v1, mas são kitados por campeões à distância</li>
+            <li><strong>Slayers</strong> eliminam alvos frágeis, mas são vulneráveis quando focados</li>
+            <li><strong>Marksmen</strong> destroem tanques, mas são frágeis contra assassinos</li>
+            <li><strong>Mages</strong> controlem fights, mas dependem de cooldowns</li>
+            <li><strong>Controllers</strong> são poderosos em team fights, mas fracos sozinhos</li>
+          </ul>
         </div>
       </div>
     </section>
