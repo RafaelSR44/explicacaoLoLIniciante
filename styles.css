@@ -665,7 +665,7 @@ ul li {
 }
 
 /* Campeões */
-/* Campeões - Sistema de Classes Atualizado */
+/* Campeões - Sistema de Classes com Expansão */
 .champions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -684,15 +684,44 @@ ul li {
     overflow: hidden;
 }
 
-.champion-class:hover {
+.champion-class.clickable {
+    cursor: pointer;
+}
+
+.champion-class.clickable:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(200, 169, 100, 0.3);
 }
 
+/* Header das classes com ícone */
+.champion-class-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+/* Estilo para os ícones das classes */
+.class-icon {
+    width: 85px;
+    height: 85px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border: 2px solid rgba(200, 169, 100, 0.3);
+}
+
+.class-icon:hover {
+    transform: scale(1.05);
+}
+
 .champion-class h3 {
     color: #CDBE91;
-    margin-bottom: 0.8rem;
+    margin: 0;
     font-size: 1.4rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .champion-class p {
@@ -742,6 +771,10 @@ ul li {
     box-shadow: 0 0 15px rgba(65, 105, 225, 0.4);
 }
 
+.champion-class[data-class="tank"] .class-icon {
+    border-color: #4169E1;
+}
+
 .champion-class[data-class="fighter"] {
     border-color: #FF4500;
 }
@@ -749,6 +782,10 @@ ul li {
 .champion-class[data-class="fighter"]:hover {
     border-color: #FF6347;
     box-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
+}
+
+.champion-class[data-class="fighter"] .class-icon {
+    border-color: #FF4500;
 }
 
 .champion-class[data-class="slayer"] {
@@ -760,6 +797,10 @@ ul li {
     box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
 }
 
+.champion-class[data-class="slayer"] .class-icon {
+    border-color: #DC143C;
+}
+
 .champion-class[data-class="marksman"] {
     border-color: #FFD700;
 }
@@ -767,6 +808,10 @@ ul li {
 .champion-class[data-class="marksman"]:hover {
     border-color: #FFF700;
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.champion-class[data-class="marksman"] .class-icon {
+    border-color: #FFD700;
 }
 
 .champion-class[data-class="mage"] {
@@ -778,6 +823,10 @@ ul li {
     box-shadow: 0 0 15px rgba(65, 105, 225, 0.4);
 }
 
+.champion-class[data-class="mage"] .class-icon {
+    border-color: #4169E1;
+}
+
 .champion-class[data-class="controller"] {
     border-color: #32CD32;
 }
@@ -785,6 +834,163 @@ ul li {
 .champion-class[data-class="controller"]:hover {
     border-color: #00FF00;
     box-shadow: 0 0 15px rgba(50, 205, 50, 0.4);
+}
+
+.champion-class[data-class="controller"] .class-icon {
+    border-color: #32CD32;
+}
+
+/* Conteúdo expandido */
+.expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.champion-class.expanded .expanded-content {
+    max-height: 1000px;
+    opacity: 1;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: 2px solid rgba(200, 169, 100, 0.3);
+}
+
+/* Subclasses */
+.subclasses-section {
+    margin-bottom: 2rem;
+}
+
+.subclasses-section h4 {
+    color: #C8A964;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.subclass {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(70, 55, 20, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid #C8A964;
+}
+
+.subclass h5 {
+    color: #C8A964;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.subclass p {
+    color: #a09b8c;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Lista de campeões */
+.champions-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.champion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.champion-item:hover {
+    background-color: rgba(200, 169, 100, 0.1);
+    transform: translateY(-2px);
+}
+
+.champion-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #463714;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.champion-item:hover .champion-img {
+    transform: scale(1.1);
+    border-color: #C8A964;
+}
+
+.champion-item span {
+    font-size: 0.85rem;
+    color: #CDBE91;
+}
+
+/* Seção de itens */
+.items-section h4 {
+    color: #C8A964;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.item-category {
+    margin-bottom: 1.5rem;
+}
+
+.item-category h6 {
+    color: #C8A964;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgba(30, 45, 80, 0.3);
+}
+
+.item:hover {
+    background-color: rgba(200, 169, 100, 0.1);
+    transform: translateY(-2px);
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid #463714;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+    border-color: #C8A964;
+}
+
+.item span {
+    font-size: 0.75rem;
+    color: #CDBE91;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /* Seção do diagrama de classes */
@@ -802,6 +1008,37 @@ ul li {
 .class-diagram-section ul li {
     margin-bottom: 0.8rem;
     font-size: 0.95rem;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .champion-class-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .class-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .champions-list {
+        justify-content: center;
+    }
+    
+    .items-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .item img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .item span {
+        font-size: 0.7rem;
+    }
 }
 
 /* Lanes */

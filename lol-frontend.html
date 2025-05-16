@@ -19,7 +19,7 @@
     <button class="nav-btn" data-section="runes">Runas</button>
     <button class="nav-btn" data-section="spells">Feitiços</button>
     <button class="nav-btn" data-section="damage">Tipos de Dano</button>
-    <button class="nav-btn" data-section="champions">Campeões</button>
+    <button class="nav-btn" data-section="champions">Classes</button>
     <button class="nav-btn" data-section="lanes">Lanes</button>
     <button class="nav-btn" data-section="minions">Minions e Gold</button>
   </nav>
@@ -673,13 +673,16 @@
     <section id="champions" class="content-section">
       <h2>Classes de Campeões</h2>
       <p style="text-align: center; margin-bottom: 2rem; color: #a09b8c;">
-        Cada classe tem características únicas e contraclasses naturais. Clique nos cards para ver detalhes sobre forças
-        e fraquezas.
+        Cada classe tem características únicas e contraclasses naturais. Clique nos cards para ver detalhes expandidos
+        sobre subclasses, campeões e itens recomendados.
       </p>
 
       <div class="champions-grid">
-        <div class="champion-class" data-class="tank">
-          <h3>Tanks</h3>
+        <div class="champion-class clickable" data-class="tank">
+          <div class="champion-class-header">
+            <img src="assets/classes/tank.png" alt="Tank" class="class-icon">
+            <h3>Tanks</h3>
+          </div>
           <p>Resistência elevada, controle de multidão e iniciação. Sacrificam dano por durabilidade.</p>
           <div class="champion-example">Ex: Malphite, Ornn, Sejuani</div>
           <div class="class-strengths">
@@ -688,10 +691,97 @@
           <div class="class-weaknesses">
             <strong>Fraco contra:</strong> Marksmen, Fighters
           </div>
+
+          <div class="expanded-content">
+            <div class="subclasses-section">
+              <h4>Subclasses</h4>
+              <div class="subclass">
+                <h5>Vanguard</h5>
+                <p>Tanks ofensivos que lideram o ataque, com alta mobilidade e iniciação forte.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/malphite.png" alt="Malphite" class="champion-img">
+                    <span>Malphite</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/ornn.png" alt="Ornn" class="champion-img">
+                    <span>Ornn</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/leona.png" alt="Leona" class="champion-img">
+                    <span>Leona</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subclass">
+                <h5>Warden</h5>
+                <p>Tanks defensivos especializados em proteção e peel para aliados.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/braum.png" alt="Braum" class="champion-img">
+                    <span>Braum</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/tahm.png" alt="Tahm Kench" class="champion-img">
+                    <span>Tahm Kench</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/shen.png" alt="Shen" class="champion-img">
+                    <span>Shen</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="items-section">
+              <h4>Itens Recomendados</h4>
+              <div class="recommended-items">
+                <div class="item-category">
+                  <h6>Core Items</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/sunfire.png" alt="Sunfire Aegis">
+                      <span>Sunfire Aegis</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/kaenic.png" alt="Kaenic Rookern">
+                      <span>Kaenic Rookern</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/thornmail.png" alt="Thornmail">
+                      <span>Thornmail</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-category">
+                  <h6>Situacionais</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/randuin.png" alt="Randuin's Omen">
+                      <span>Randuin's Omen</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/spirit.png" alt="Spirit Visage">
+                      <span>Spirit Visage</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/warmog.png" alt="Warmog's Armor">
+                      <span>Warmog's Armor</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="champion-class" data-class="fighter">
-          <h3>Fighters (Bruisers)</h3>
+        <div class="champion-class clickable" data-class="fighter">
+          <div class="champion-class-header">
+            <img src="assets/classes/fighter.png" alt="Fighter" class="class-icon">
+            <h3>Fighters (Bruisers)</h3>
+          </div>
           <p>Equilíbrio entre dano e resistência. Dominam combates prolongados de curta distância.</p>
           <div class="champion-example">Ex: Darius, Camille, Jax</div>
           <div class="class-strengths">
@@ -700,10 +790,97 @@
           <div class="class-weaknesses">
             <strong>Fraco contra:</strong> Marksmen, Mages
           </div>
+
+          <div class="expanded-content">
+            <div class="subclasses-section">
+              <h4>Subclasses</h4>
+              <div class="subclass">
+                <h5>Juggernaut</h5>
+                <p>Fighters de alta durabilidade que dominam em combates prolongados, mas com baixa mobilidade.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/darius.png" alt="Darius" class="champion-img">
+                    <span>Darius</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/garen.png" alt="Garen" class="champion-img">
+                    <span>Garen</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/mordekaiser.png" alt="Mordekaiser" class="champion-img">
+                    <span>Mordekaiser</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subclass">
+                <h5>Diver</h5>
+                <p>Fighters com alta mobilidade que se especializam em mergulhar na backline inimiga.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/camille.png" alt="Camille" class="champion-img">
+                    <span>Camille</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/irelia.png" alt="Irelia" class="champion-img">
+                    <span>Irelia</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/jarvan.png" alt="Jarvan IV" class="champion-img">
+                    <span>Jarvan IV</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="items-section">
+              <h4>Itens Recomendados</h4>
+              <div class="recommended-items">
+                <div class="item-category">
+                  <h6>Core Items</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/sundered.png" alt="Sundered Sky">
+                      <span>Sundered Sky</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/black.png" alt="Black Cleaver">
+                      <span>Black Cleaver</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/sterak.png" alt="Sterak's Gage">
+                      <span>Sterak's Gage</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-category">
+                  <h6>Situacionais</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/death.png" alt="Death's Dance">
+                      <span>Death's Dance</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/hullbreaker.png" alt="Hullbreaker">
+                      <span>Hullbreaker</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/maw.png" alt="Maw of Malmortius">
+                      <span>Maw of Malmortius</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="champion-class" data-class="slayer">
-          <h3>Slayers (Assassinos)</h3>
+        <div class="champion-class clickable" data-class="slayer">
+          <div class="champion-class-header">
+            <img src="assets/classes/slayer.png" alt="Slayer" class="class-icon">
+            <h3>Slayers (Assassinos)</h3>
+          </div>
           <p>Mobilidade extrema e dano em rajada. Especialistas em eliminar alvos prioritários rapidamente.</p>
           <div class="champion-example">Ex: Zed, Yasuo, Katarina</div>
           <div class="class-strengths">
@@ -712,10 +889,97 @@
           <div class="class-weaknesses">
             <strong>Fraco contra:</strong> Tanks, Fighters
           </div>
+
+          <div class="expanded-content">
+            <div class="subclasses-section">
+              <h4>Subclasses</h4>
+              <div class="subclass">
+                <h5>Assassin</h5>
+                <p>Especialistas em infiltração e eliminação rápida de alvos prioritários.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/zed.png" alt="Zed" class="champion-img">
+                    <span>Zed</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/katarina.png" alt="Katarina" class="champion-img">
+                    <span>Katarina</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/talon.png" alt="Talon" class="champion-img">
+                    <span>Talon</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subclass">
+                <h5>Skirmisher</h5>
+                <p>Assassinos que se destacam em combates 1v1 e pequenas escaramuças.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/yasuo.png" alt="Yasuo" class="champion-img">
+                    <span>Yasuo</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/fiora.png" alt="Fiora" class="champion-img">
+                    <span>Fiora</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/riven.png" alt="Riven" class="champion-img">
+                    <span>Riven</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="items-section">
+              <h4>Itens Recomendados</h4>
+              <div class="recommended-items">
+                <div class="item-category">
+                  <h6>Core Items</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/eclipse.png" alt="Eclipse">
+                      <span>Eclipse</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/youmuu.png" alt="Youmuu's Ghostblade">
+                      <span>Youmuu's Ghostblade</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/serpent.png" alt="Serpent's Fang">
+                      <span>Serpent's Fang</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-category">
+                  <h6>Situacionais</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/edge.png" alt="Edge of Night">
+                      <span>Edge of Night</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/axiom.png" alt="Axiom Arc">
+                      <span>Axiom Arc</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/collector.png" alt="The Collector">
+                      <span>The Collector</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="champion-class" data-class="marksman">
-          <h3>Marksmen (ADC)</h3>
+        <div class="champion-class clickable" data-class="marksman">
+          <div class="champion-class-header">
+            <img src="assets/classes/marksman.png" alt="Marksman" class="class-icon">
+            <h3>Marksmen (ADC)</h3>
+          </div>
           <p>Dano contínuo à distância baseado em ataques básicos. Principal fonte de DPS da equipe.</p>
           <div class="champion-example">Ex: Jinx, Ashe, Kai'Sa</div>
           <div class="class-strengths">
@@ -724,10 +988,97 @@
           <div class="class-weaknesses">
             <strong>Fraco contra:</strong> Slayers, Mages
           </div>
+
+          <div class="expanded-content">
+            <div class="subclasses-section">
+              <h4>Subclasses</h4>
+              <div class="subclass">
+                <h5>Critical Strike ADC</h5>
+                <p>Marksmen tradicionais focados em critical strike e ataques básicos.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/jinx.png" alt="Jinx" class="champion-img">
+                    <span>Jinx</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/caitlyn.png" alt="Caitlyn" class="champion-img">
+                    <span>Caitlyn</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/ashe.png" alt="Ashe" class="champion-img">
+                    <span>Ashe</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subclass">
+                <h5>On-Hit ADC</h5>
+                <p>Marksmen que escalam com velocidade de ataque e efeitos on-hit.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/kai.png" alt="Kai'Sa" class="champion-img">
+                    <span>Kai'Sa</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/varus.png" alt="Varus" class="champion-img">
+                    <span>Varus</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/kogmaw.png" alt="Kog'Maw" class="champion-img">
+                    <span>Kog'Maw</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="items-section">
+              <h4>Itens Recomendados</h4>
+              <div class="recommended-items">
+                <div class="item-category">
+                  <h6>Core Items</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/kraken.png" alt="Kraken Slayer">
+                      <span>Kraken Slayer</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/infinity.png" alt="Infinity Edge">
+                      <span>Infinity Edge</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/lord.png" alt="Lord Dominik's Regards">
+                      <span>Lord Dominik's</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-category">
+                  <h6>Situacionais</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/bloodthirster.png" alt="Bloodthirster">
+                      <span>Bloodthirster</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/phantom.png" alt="Phantom Dancer">
+                      <span>Phantom Dancer</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/quicksilver.png" alt="Quicksilver Sash">
+                      <span>Quicksilver Sash</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="champion-class" data-class="mage">
-          <h3>Mages</h3>
+        <div class="champion-class clickable" data-class="mage">
+          <div class="champion-class-header">
+            <img src="assets/classes/mage.png" alt="Mage" class="class-icon">
+            <h3>Mages</h3>
+          </div>
           <p>Dano mágico em área e controle de multidão. Dominam através de habilidades poderosas.</p>
           <div class="champion-example">Ex: Azir, Ahri, Syndra</div>
           <div class="class-strengths">
@@ -736,10 +1087,116 @@
           <div class="class-weaknesses">
             <strong>Fraco contra:</strong> Tanks, Fighters
           </div>
+
+          <div class="expanded-content">
+            <div class="subclasses-section">
+              <h4>Subclasses</h4>
+              <div class="subclass">
+                <h5>Burst Mage</h5>
+                <p>Magos especializados em eliminar alvos rapidamente com combos de habilidades.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/syndra.png" alt="Syndra" class="champion-img">
+                    <span>Syndra</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/annie.png" alt="Annie" class="champion-img">
+                    <span>Annie</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/veigar.png" alt="Veigar" class="champion-img">
+                    <span>Veigar</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subclass">
+                <h5>Battle Mage</h5>
+                <p>Magos que entram no meio das lutas, causando dano sustentado em área.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/azir.png" alt="Azir" class="champion-img">
+                    <span>Azir</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/cassiopeia.png" alt="Cassiopeia" class="champion-img">
+                    <span>Cassiopeia</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/ryze.png" alt="Ryze" class="champion-img">
+                    <span>Ryze</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subclass">
+                <h5>Artillery Mage</h5>
+                <p>Magos de longo alcance que causam dano de posições seguras.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/xerath.png" alt="Xerath" class="champion-img">
+                    <span>Xerath</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/vel.png" alt="Vel'Koz" class="champion-img">
+                    <span>Vel'Koz</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/ziggs.png" alt="Ziggs" class="champion-img">
+                    <span>Ziggs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="items-section">
+              <h4>Itens Recomendados</h4>
+              <div class="recommended-items">
+                <div class="item-category">
+                  <h6>Core Items</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/ludens.png" alt="Luden's Companion">
+                      <span>Luden's Companion</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/malignance.png" alt="Malignance">
+                      <span>Malignance</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/rod.png" alt="Rod of Ages">
+                      <span>Rod of Ages</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-category">
+                  <h6>Situacionais</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/zhonya.png" alt="Zhonya's Hourglass">
+                      <span>Zhonya's Hourglass</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/shadowflame.png" alt="Shadowflame">
+                      <span>Shadowflame</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/rylai.png" alt="Rylai's Crystal Scepter">
+                      <span>Rylai's Crystal</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="champion-class" data-class="controller">
-          <h3>Controllers (Supports)</h3>
+        <div class="champion-class clickable" data-class="controller">
+          <div class="champion-class-header">
+            <img src="assets/classes/controller.png" alt="Controller" class="class-icon">
+            <h3>Controllers (Supports)</h3>
+          </div>
           <p>Utilidade e suporte. Amplificam o poder da equipe através de escudos, curas e controle.</p>
           <div class="champion-example">Ex: Lulu, Thresh, Janna</div>
           <div class="class-strengths">
@@ -747,6 +1204,90 @@
           </div>
           <div class="class-weaknesses">
             <strong>Fraco quando:</strong> Sozinho no mapa
+          </div>
+
+          <div class="expanded-content">
+            <div class="subclasses-section">
+              <h4>Subclasses</h4>
+              <div class="subclass">
+                <h5>Enchanter</h5>
+                <p>Supports especializados em curar, dar escudos e buffar aliados.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/lulu.png" alt="Lulu" class="champion-img">
+                    <span>Lulu</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/janna.png" alt="Janna" class="champion-img">
+                    <span>Janna</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/soraka.png" alt="Soraka" class="champion-img">
+                    <span>Soraka</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subclass">
+                <h5>Catcher</h5>
+                <p>Supports focados em engajar e fazer picks isolados no inimigo.</p>
+                <div class="champions-list">
+                  <div class="champion-item">
+                    <img src="assets/champions/thresh.png" alt="Thresh" class="champion-img">
+                    <span>Thresh</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/blitzcrank.png" alt="Blitzcrank" class="champion-img">
+                    <span>Blitzcrank</span>
+                  </div>
+                  <div class="champion-item">
+                    <img src="assets/champions/pyke.png" alt="Pyke" class="champion-img">
+                    <span>Pyke</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="items-section">
+              <h4>Itens Recomendados</h4>
+              <div class="recommended-items">
+                <div class="item-category">
+                  <h6>Core Items</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/moonstone.png" alt="Moonstone Renewer">
+                      <span>Moonstone Renewer</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/locket.png" alt="Locket of Iron Solari">
+                      <span>Locket of Solari</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/redemption.png" alt="Redemption">
+                      <span>Redemption</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-category">
+                  <h6>Situacionais</h6>
+                  <div class="items-grid">
+                    <div class="item">
+                      <img src="assets/items/staff.png" alt="Staff of Flowing Water">
+                      <span>Staff of Water</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/mikael.png" alt="Mikael's Blessing">
+                      <span>Mikael's Blessing</span>
+                    </div>
+                    <div class="item">
+                      <img src="assets/items/wardstone.png" alt="Vigilant Wardstone">
+                      <span>Wardstone</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
